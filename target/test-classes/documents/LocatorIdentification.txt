@@ -1,0 +1,244 @@
+<amazon>
+	<webelement id="logInPage_SignInButton">
+		<name>logInPage_SignInButton</name>
+		<locator>xpath</locator>
+		<value>//*[@id='nav-link-yourAccount']/span[1]</value>
+	</webelement>
+	<webelement id="logInPage_UserTextField">
+		<name>logInPage_UserTextField</name>
+		<locator>id</locator>
+		<value>ap_email</value>
+	</webelement>
+	<webelement id="logInPage_ContinueButton">
+		<name>logInPage_ContinueButton</name>
+		<locator>id</locator>
+		<value>continue</value>
+	</webelement>
+	<webelement id="logInPage_PasswordTextField">
+		<name>logInPage_PasswordTextField</name>
+		<locator>id</locator>
+		<value>ap_password</value>
+	</webelement>
+	<webelement id="logInPage_SubmitButton">
+		<name>logInPage_SubmitButton</name>
+		<locator>id</locator>
+		<value>signInSubmit</value>
+	</webelement>
+	<webelement id="Menu_Category">
+		<name>Menu_Category</name>
+		<locator>xpath</locator>
+		<value>//span[text()='Shop by']</value>
+	</webelement>
+	<webelement id="Choose_ProductType">
+		<name>Choose_ProductType</name>
+		<locator>xpath</locator>
+		<value>//span [text()='Mobiles, Computers']</value>
+	</webelement>
+	<webelement id="Selected_Screen Protectors">
+		<name>Selected_Screen Protectors</name>
+		<locator>xpath</locator>
+		<value>//span [text()='Screen Protectors']</value>
+	</webelement>
+	<webelement id="Div_size">
+		<name>Div_size</name>
+		<locator>xpath</locator>
+		<value>//div[@class='acswidget acswidget-carousel celwidget a-spacing-base acswidget-carousel--shoveler acswidget-carousel--default']</value>
+	</webelement>
+	<webelement id="ProductsList_Size">
+		<name>ProductsList_Size</name>
+		<locator>cssSelector</locator>
+		<value>ol[class='a-carousel']>li</value>
+	</webelement>
+	<webelement id="ProductName">
+		<name>ProductName</name>
+		<locator>cssSelector</locator>
+		<value>div[class='a-box-group a-spacing-top-micro acs_product-title']>a</value>
+	</webelement>
+	<webelement id="ProductPrice">
+		<name>ProductPrice</name>
+		<locator>cssSelector</locator>
+		<value>div[class='a-box-group a-size-small a-spacing-none acs_product-price']>span+span</value>
+	</webelement>
+	<webelement id="ProductRating">
+		<name>ProductRating</name>
+		<locator>xpath</locator>
+		<value>.//div[@class='a-box-group a-spacing-none a-icon-row acs_product-rating']//i</value>
+	</webelement>
+	<webelement id="ProductnoOfReviews">
+		<name>ProductnoOfReviews</name>
+		<locator>xpath</locator>
+		<value>.//div[@class='a-box-group a-spacing-none a-icon-row acs_product-rating']//span</value>
+	</webelement>
+	<webelement id="Product_PrimeorNot">
+		<name>Product_PrimeorNot</name>
+		<locator>xpath</locator>
+		<value>.//div[@class='a-box-group a-size-small a-spacing-none acs_product-price']//i</value>
+	</webelement>
+	<webelement id="Product_SearchTextBox">**************SendKeys method**************************
+		<name>Product_SearchTextBox</name>
+		<locator>id</locator>
+		<value>twotabsearchtextbox</value>
+	</webelemen>
+	<webelement id="Product_SearchTextBoxButton">***************click method*********************
+		<name>Product_SearchTextBoxButton</name>
+		<locator>id</locator>
+		<value>nav-search-submit-text</value>
+	</webelemen>
+	<webelement id="ShowingRequiredProductDetails">************click method*************************
+		<name>ShowingRequiredProductDetails</name>
+		<locator>xpath</locator>
+		<value> //li[@id='result_0']//*[@class='a-size-medium s-inline  s-access-title  a-text-normal']</value>
+	</webelemen>
+	<webelement id="Product_AddToCartButton">******************click method******************************
+		<name>Product_AddToCartButton</name>
+		<locator>id</locator>
+		<value>add-to-cart-button</value>
+	</webelemen>
+	<webelement id="Product_CartCountButton">*******************clickmethod*****************************
+		<name>Product_CartCountButton</name>
+		<locator>id</locator>
+		<value>nav-cart-count</value>
+	</webelemen>
+	<webelement id="AfterSearching_ProductPriceBlock">**************getText Method*********<span>
+		<name>AfterSearching_ProductPriceBlock</name>
+		<locator>id</locator>
+		<value>priceblock_ourprice</value>
+	</webelemen>
+	<webelement id="AfterSearching_ProductCustomerRevies">*************getText method*************<span>
+		<name>AfterSearching_ProductCustomerRevies</name>
+		<locator>id</locator>
+		<value>acrCustomerReviewText</value>
+	</webelemen>
+	<webelement id="AfterSearching_ProductTitle">******************getText*****<span>
+		<name>AfterSearching_ProductTitle</name>
+		<locator>id</locator>
+		<value>productTitle</value>
+	</webelemen>
+
+
+
+</amazon>
+
+
+
+******************************************************************************
+<amazon>
+	<webelement id="logInPage_SignInButton">
+		<name>logInPage_SignInButton</name>
+		<locator>xpath</locator>
+		<value>//*[@id='nav-link-yourAccount']/span[1]</value>
+	</webelement>
+	<webelement id="logInPage_UserTextField">
+		<name>logInPage_UserTextField</name>
+		<locator>id</locator>
+		<value>ap_email</value>
+	</webelement>
+	<webelement id="logInPage_ContinueButton">
+		<name>logInPage_ContinueButton</name>
+		<locator>id</locator>
+		<value>continue</value>
+	</webelement>
+	<webelement id="logInPage_PasswordTextField">
+		<name>logInPage_PasswordTextField</name>
+		<locator>id</locator>
+		<value>ap_password</value>
+	</webelement>
+	<webelement id="logInPage_SubmitButton">
+		<name>logInPage_SubmitButton</name>
+		<locator>id</locator>
+		<value>signInSubmit</value>
+	</webelement>
+	<webelement id="Menu_Category">
+		<name>Menu_Category</name>
+		<locator>xpath</locator>
+		<value>//span[text()='Shop by']</value>
+	</webelement>
+	<webelement id="Choose_ProductType">
+		<name>Choose_ProductType</name>
+		<locator>xpath</locator>
+		<value>//span [text()='Mobiles, Computers']</value>
+	</webelement>
+	<webelement id="Selected_Screen Protectors">
+		<name>Selected_Screen Protectors</name>
+		<locator>xpath</locator>
+		<value>//span [text()='Screen Protectors']</value>
+	</webelement>
+	<webelement id="Div_size">
+		<name>Div_size</name>
+		<locator>xpath</locator>
+		<value>//div[@class='acswidget acswidget-carousel celwidget a-spacing-base acswidget-carousel--shoveler acswidget-carousel--default']</value>
+	</webelement>
+	<webelement id="ProductsList_Size">
+		<name>ProductsList_Size</name>
+		<locator>cssSelector</locator>
+		<value>ol[class='a-carousel']>li</value>
+	</webelement>
+	<webelement id="ProductName">
+		<name>ProductName</name>
+		<locator>cssSelector</locator>
+		<value>div[class='a-box-group a-spacing-top-micro acs_product-title']>a</value>
+	</webelement>
+	<webelement id="ProductPrice">
+		<name>ProductPrice</name>
+		<locator>cssSelector</locator>
+		<value>div[class='a-box-group a-size-small a-spacing-none acs_product-price']>span+span</value>
+	</webelement>
+	<webelement id="ProductRating">
+		<name>ProductRating</name>
+		<locator>xpath</locator>
+		<value>.//div[@class='a-box-group a-spacing-none a-icon-row acs_product-rating']//i</value>
+	</webelement>
+	<webelement id="ProductnoOfReviews">
+		<name>ProductnoOfReviews</name>
+		<locator>xpath</locator>
+		<value>.//div[@class='a-box-group a-spacing-none a-icon-row acs_product-rating']//span</value>
+	</webelement>
+	<webelement id="Product_PrimeorNot">
+		<name>Product_PrimeorNot</name>
+		<locator>xpath</locator>
+		<value>.//div[@class='a-box-group a-size-small a-spacing-none acs_product-price']//i</value>
+	</webelement>
+	<webelement id="Product_SearchTextBox">
+		<name>Product_SearchTextBox</name>
+		<locator>id</locator>
+		<value>twotabsearchtextbox</value>
+	</webelemen>
+	<webelement id="Product_SearchTextBoxButton">
+		<name>Product_SearchTextBoxButton</name>
+		<locator>id</locator>
+		<value>nav-search-submit-text</value>
+	</webelemen>
+	<webelement id="ShowingRequiredProductDetails">
+		<name>ShowingRequiredProductDetails</name>
+		<locator>xpath</locator>
+		<value> //li[@id='result_0']//*[@class='a-size-medium s-inline  s-access-title  a-text-normal']</value>
+	</webelemen>
+	<webelement id="Product_AddToCartButton">
+		<name>Product_AddToCartButton</name>
+		<locator>id</locator>
+		<value>add-to-cart-button</value>
+	</webelemen>
+	<webelement id="Product_CartCountButton">
+		<name>Product_CartCountButton</name>
+		<locator>id</locator>
+		<value>nav-cart-count</value>
+	</webelemen>
+	<webelement id="AfterSearching_ProductPriceBlock">
+		<name>AfterSearching_ProductPriceBlock</name>
+		<locator>id</locator>
+		<value>priceblock_ourprice</value>
+	</webelemen>
+	<webelement id="AfterSearching_ProductCustomerRevies">
+		<name>AfterSearching_ProductCustomerRevies</name>
+		<locator>id</locator>
+		<value>acrCustomerReviewText</value>
+	</webelemen>
+	<webelement id="AfterSearching_ProductTitle">
+		<name>AfterSearching_ProductTitle</name>
+		<locator>id</locator>
+		<value>productTitle</value>
+	</webelemen>
+
+
+
+</amazon>

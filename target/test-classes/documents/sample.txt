@@ -1,0 +1,1129 @@
+package newpackage;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class UsingTestNgExtractAmazonProductsInXml {
+	@BeforeSuite
+	public void beforeSuite()
+	{
+		System.out.println("Before Suite Method");
+	}
+	@AfterSuite
+	public void AfterSuite()
+	{
+		System.out.println("After Suite Method");
+	}
+
+	
+	@BeforeClass
+	public void beforeClass()
+	{
+		System.out.println("Before Class Method");
+	}
+
+	
+	 @AfterClass 
+	 public void AfterClass() 
+	 {
+	  System.out.println("After Classs Method"); 
+	  }
+	 
+	@BeforeMethod
+	public void beforemethod1()
+	{
+		System.out.println("Before Method");
+	}
+	@AfterMethod
+	public void aftermethod1()
+	{
+		System.out.println("After Method");
+	}
+  @Test
+  public void f() 
+  {
+	  System.out.println("This is Test Method");
+  }
+}
+
+=======================================================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="newpackage.UsingTestNgExtractAmazonProductsInXml"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+==============================================================================================================
+[RemoteTestNG] detected TestNG version 6.14.2
+Before Suite Method
+Before Class Method
+Before Method
+This is Test Method
+After Method
+After Classs Method
+After Suite Method
+
+===============================================
+Suite
+Total tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+
+
+********************************************************************************************************************
+package newpackage;
+
+import java.awt.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class UsingTestNgExtractAmazonProductsInXml 
+{
+	WebDriver driver;
+	public static FunctionalityOnWebElement webElementObject;
+	
+	
+	
+	
+	 
+	@BeforeMethod
+	public void beforemethod1() throws Exception
+	{
+		System.out.println("bEFORE Classs Method"); 
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\softwares\\chromedriver.exe");
+		driver= new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+	}
+	
+  @Test
+  public void f() throws Exception 
+  {
+	  System.out.println("tEST Method"); 
+	  webElementObject = new FunctionalityOnWebElement(driver);
+	  webElementObject.getWebElement("logInPage_SignInButton").click();
+		webElementObject.getWebElement("logInPage_UserTextField").sendKeys("9666854537");
+		webElementObject.getWebElement("logInPage_ContinueButton").click();
+		webElementObject.getWebElement("logInPage_PasswordTextField").sendKeys("asdf123");
+		webElementObject.getWebElement("logInPage_SubmitButton").click();
+		Thread.sleep(5000);
+		Actions actionobj = new Actions(driver);
+		actionobj.moveToElement(webElementObject.getWebElement("Menu_Category")).build().perform();
+		actionobj.moveToElement(webElementObject.getWebElement("Choose_ProductType")).build().perform();
+		Thread.sleep(3000);
+		webElementObject.getWebElement("Selected_Screen Protectors").click();
+		Thread.sleep(15000);
+		// got error without java.util.List
+		java.util.List<WebElement> divList = webElementObject.getWebElementsList("Div_size");
+		
+		System.out.println("*****Div list size : " + divList.size());
+		
+		for(WebElement div : divList)
+		{
+			
+				
+				Thread.sleep(5000);
+				// got error without java.util.List
+				java.util.List<WebElement>  productsList = (webElementObject.getWebElementsList("ProductsList_Size"));
+				
+				System.out.println("Products list size : " + productsList.size());
+				
+			
+				for (WebElement product : productsList) 
+				{
+					
+					
+					Thread.sleep(5000);
+					String productName = product.findElement(webElementObject.getElement("ProductName")).getAttribute("title");
+					System.out.println("productName  :"+productName);
+					WebElement productPrice = product.findElement(webElementObject.getElement("ProductPrice"));
+					try
+					{
+					System.out.println("Product Price  : " + productPrice.getText()); 
+					if(productPrice.getText().isEmpty())
+					{
+						
+						System.out.println("Product Price  : Not Found");
+					}
+					else 
+					{
+						
+						System.out.println("Product Price  : " + productPrice.getText());
+						
+					}
+					
+					}
+					catch(org.openqa.selenium.NoSuchElementException e) 
+					{
+						
+						System.err.println("Element not Found");
+					}
+					 
+		
+					
+				    try { 
+				    	WebElement rating = product.findElement(webElementObject.getElement("ProductRating"));
+				    
+					
+				     System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41)); 
+				   if(rating.getAttribute("class").substring(38, 41).isEmpty())
+				   {
+					  
+					  
+					   System.out.println("Rating : Not Found");
+					   
+				   }
+				   else
+				   {
+					   
+					  System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41).replaceAll(" a", "").replace('-', '.'));
+				   }
+				  
+				   }
+				    catch(org.openqa.selenium.NoSuchElementException e) 
+				    {
+				    	System.err.println("Element not Found");
+				    }
+				    
+				  			  
+				 try { 
+					 WebElement noOfReviews = product.findElement(webElementObject.getElement("ProductnoOfReviews"));
+				 
+				
+				 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  if(noOfReviews.getText().isEmpty())
+					  {
+					 
+					 System.out.println("Reviews : Not Found");
+					  
+					  }
+				  else
+				  {
+					 
+					 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  }
+				  }
+				 catch(org.openqa.selenium.NoSuchElementException e) 
+				 {
+					 System.err.println("Element not Found");
+					
+				 }
+				 
+				
+				 				  
+				 
+				  try{
+					  WebElement isPrimeOrNot = product.findElement(webElementObject.getElement("Product_PrimeorNot"));
+				 
+				  
+				
+				 // System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+				  if(isPrimeOrNot.getAttribute("aria-label").isEmpty())
+						  {
+					 
+					 System.out.println("PrimeOrNot : Not Found ");
+					  
+						  }else
+							  {
+							  
+							  System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+							  
+							  }}
+				  catch(org.openqa.selenium.NoSuchElementException e) {
+					  System.err.println("Element not Found");
+					  
+				  }
+				 
+				  
+				  }
+			}
+		
+  }
+  @AfterMethod
+  public void driverclose()
+  {
+	  Actions action=new Actions(driver);
+	  action.moveToElement(driver.findElement(By.id("nav-link-yourAccount"))).build().perform();
+	  driver.findElement(By.id("nav-item-signout")).click();
+	 driver.quit();
+  }
+}
+--------------------------------------------------------------------------------------------------------
+package newpackage;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Set;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.UserDataHandler;
+import org.xml.sax.SAXException;
+
+public class AmazonProductUsingXml
+{
+
+	public static void main(String[] args) throws IOException, Exception
+	{
+		System.setProperty("webdriver.chrome.driver", "D:\\softwares\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		
+		FunctionalityOnWebElement webElementObject = new FunctionalityOnWebElement(driver);
+			
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		
+		
+				webElementObject.getWebElement("logInPage_SignInButton").click();
+				webElementObject.getWebElement("logInPage_UserTextField").sendKeys("9666854537");
+				webElementObject.getWebElement("logInPage_ContinueButton").click();
+				webElementObject.getWebElement("logInPage_PasswordTextField").sendKeys("asdf123");
+				webElementObject.getWebElement("logInPage_SubmitButton").click();
+				Thread.sleep(5000);
+				Actions actionobj = new Actions(driver);
+				actionobj.moveToElement(webElementObject.getWebElement("Menu_Category")).build().perform();
+				actionobj.moveToElement(webElementObject.getWebElement("Choose_ProductType")).build().perform();
+				Thread.sleep(3000);
+				webElementObject.getWebElement("Selected_Screen Protectors").click();
+				Thread.sleep(15000);
+		
+		
+		List<WebElement> divList = webElementObject.getWebElementsList("Div_size");
+		
+		System.out.println("*****Div list size : " + divList.size());
+		
+		for(WebElement div : divList)
+		{
+			
+				
+				Thread.sleep(5000);
+				
+				List<WebElement> productsList = webElementObject.getWebElementsList("ProductsList_Size");
+				
+				System.out.println("Products list size : " + productsList.size());
+				
+			
+				for (WebElement product : productsList) 
+				{
+					
+					
+					Thread.sleep(5000);
+					String productName = product.findElement(webElementObject.getElement("ProductName")).getAttribute("title");
+					System.out.println("productName  :"+productName);
+					WebElement productPrice = product.findElement(webElementObject.getElement("ProductPrice"));
+					try
+					{
+					System.out.println("Product Price  : " + productPrice.getText()); 
+					if(productPrice.getText().isEmpty())
+					{
+						
+						System.out.println("Product Price  : Not Found");
+					}
+					else 
+					{
+						
+						System.out.println("Product Price  : " + productPrice.getText());
+						
+					}
+					
+					}
+					catch(org.openqa.selenium.NoSuchElementException e) 
+					{
+						
+						System.err.println("Element not Found");
+					}
+					 
+		
+					
+				    try { 
+				    	WebElement rating = product.findElement(webElementObject.getElement("ProductRating"));
+				    
+					
+				     System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41)); 
+				   if(rating.getAttribute("class").substring(38, 41).isEmpty())
+				   {
+					  
+					  
+					   System.out.println("Rating : Not Found");
+					   
+				   }
+				   else
+				   {
+					   
+					  System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41).replaceAll(" a", "").replace('-', '.'));
+				   }
+				  
+				   }
+				    catch(org.openqa.selenium.NoSuchElementException e) 
+				    {
+				    	System.err.println("Element not Found");
+				    }
+				    
+				  			  
+				 try { 
+					 WebElement noOfReviews = product.findElement(webElementObject.getElement("ProductnoOfReviews"));
+				 
+				
+				 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  if(noOfReviews.getText().isEmpty())
+					  {
+					 
+					 System.out.println("Reviews : Not Found");
+					  
+					  }
+				  else
+				  {
+					 
+					 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  }
+				  }
+				 catch(org.openqa.selenium.NoSuchElementException e) 
+				 {
+					 System.err.println("Element not Found");
+					
+				 }
+				 
+				
+				 				  
+				 
+				  try{
+					  WebElement isPrimeOrNot = product.findElement(webElementObject.getElement("Product_PrimeorNot"));
+				 
+				  
+				
+				 // System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+				  if(isPrimeOrNot.getAttribute("aria-label").isEmpty())
+						  {
+					 
+					 System.out.println("PrimeOrNot : Not Found ");
+					  
+						  }else
+							  {
+							  
+							  System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+							  
+							  }}
+				  catch(org.openqa.selenium.NoSuchElementException e) {
+					  System.err.println("Element not Found");
+					  
+				  }
+				 
+				  
+				  }
+			}
+		
+		}
+
+	
+		
+	}
+	
+--------------------------------------------------------------------------------------------------
+package newpackage;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class ReadingDataFromXmlc 
+{
+	public Map<String ,List<String>> readingDataFromXmlMethod() throws Exception
+	{
+
+		File fXmlFile = new File("D:\\amazonProducts.xml");
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(fXmlFile);
+		doc.getDocumentElement().normalize();
+
+		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+		
+		NodeList nList = doc.getElementsByTagName("webelement");
+				
+		
+		Map< String,List<String>>  elementsMap =  new LinkedHashMap< String, List<String>>(); 
+		
+		for (int i = 0; i < nList.getLength(); i++) 
+		{
+
+			Node nNode = nList.item(i);
+			
+					
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) 
+			{
+
+				Element eElement = (Element) nNode;
+				
+				
+				String id= eElement.getAttribute("id");
+				String name= eElement.getElementsByTagName("name").item(0).getTextContent();
+				String locator= eElement.getElementsByTagName("locator").item(0).getTextContent();
+				String value=eElement.getElementsByTagName("value").item(0).getTextContent();
+				
+				List<String> elementDetailsList = new ArrayList<String>();
+				elementDetailsList.add(name);
+				elementDetailsList.add(locator);
+				elementDetailsList.add(value);
+				 
+				 elementsMap.put(id, elementDetailsList);
+				 
+		}
+		}
+			return elementsMap;
+		
+	}
+
+}
+----------------------------------------------------------------------------------------------
+package newpackage;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class FunctionalityOnWebElement 
+{
+	public static Map< String,List<String>>  allPagesElementsMap = new LinkedHashMap< String,List<String>>();
+	public WebDriver driver;
+	
+	public FunctionalityOnWebElement(WebDriver driver)
+	{
+		this.driver = driver;
+		loadMap();
+	}
+	
+	public void loadMap()
+	{
+		ReadingDataFromXmlc rdf= new ReadingDataFromXmlc();
+		try {
+			allPagesElementsMap = rdf.readingDataFromXmlMethod();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public WebElement getWebElement(String webElementName) throws Exception 
+	{
+		
+		List<String> elementData = allPagesElementsMap.get(webElementName);
+		
+		
+		String locater = elementData.get(1);
+		String locatorValue = elementData.get(2);
+		
+		WebElement locator = null;
+		switch (locater) 
+		{
+		case "id":
+			locator= driver.findElement(By.id(locatorValue));
+			break;
+		
+		case "cssSelector":
+			locator=driver.findElement(By.cssSelector(locatorValue));
+			break;
+		case "xpath":
+			locator=driver.findElement(By.xpath(locatorValue));
+			break;
+			
+
+		default:
+			break;
+		}
+	
+		return locator;
+	}
+	
+	public List<WebElement> getWebElementsList(String webElementName) throws Exception {
+		List<String> elementData = allPagesElementsMap.get(webElementName);
+
+		String locater = elementData.get(1);
+		String locatorValue = elementData.get(2);
+
+		List<WebElement> locatorList = null;
+		switch (locater) {
+		case "id":
+			locatorList = driver.findElements(By.id(locatorValue));
+			break;
+
+		case "cssSelector":
+			locatorList = driver.findElements(By.cssSelector(locatorValue));
+			break;
+		
+		case "xpath":
+			locatorList = driver.findElements(By.xpath(locatorValue));
+			break;
+
+		default:
+			break;
+		}
+
+		return locatorList;
+	}
+	
+	public By getElement(String webElementName) throws Exception 
+	{
+		
+		List<String> elementData = allPagesElementsMap.get(webElementName);
+		
+		
+		String locater = elementData.get(1);
+		String locatorValue = elementData.get(2);
+		
+		By locator = null;
+		switch (locater) 
+		{
+		case "id":
+			locator= By.id(locatorValue);
+			break;
+		
+		case "cssSelector":
+			locator=By.cssSelector(locatorValue);
+			break;
+		case "xpath":
+			locator=By.xpath(locatorValue);
+			break;
+			
+
+		default:
+			break;
+		}
+	
+		return locator;
+	}
+
+}
+-----------------------------------------------------------------------------------------
+package newpackage;
+
+import org.testng.annotations.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.junit.runners.Suite.SuiteClasses;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
+public class TestBaseClass 
+{	
+	WebDriver driver;
+	FunctionalityOnWebElement webElementObject = new FunctionalityOnWebElement(driver);
+	@BeforeSuite
+	public void BrowserLaunchMethod() throws Exception
+	
+	{
+		System.setProperty("webdriver.chrome.driver", "D:\\softwares\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+	}
+  
+  @BeforeClass
+   public Map<String ,List<String>> readingDataFromXmlMethod() throws Exception
+		{
+
+			File fXmlFile = new File("D:\\amazonProducts.xml");
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(fXmlFile);
+			doc.getDocumentElement().normalize();
+
+			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+			
+			NodeList nList = doc.getElementsByTagName("webelement");
+					
+			
+			Map< String,List<String>>  elementsMap =  new LinkedHashMap< String, List<String>>(); 
+			
+			for (int i = 0; i < nList.getLength(); i++) 
+			{
+
+				Node nNode = nList.item(i);
+				
+						
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) 
+				{
+
+					Element eElement = (Element) nNode;
+					
+					
+					String id= eElement.getAttribute("id");
+					String name= eElement.getElementsByTagName("name").item(0).getTextContent();
+					String locator= eElement.getElementsByTagName("locator").item(0).getTextContent();
+					String value=eElement.getElementsByTagName("value").item(0).getTextContent();
+					
+					List<String> elementDetailsList = new ArrayList<String>();
+					elementDetailsList.add(name);
+					elementDetailsList.add(locator);
+					elementDetailsList.add(value);
+					 
+					 elementsMap.put(id, elementDetailsList);
+					 
+			}
+			}
+				return elementsMap;
+			
+		}
+  
+  @BeforeTest
+  public void beforeTest() throws Exception 
+  {
+	  webElementObject.getWebElement("logInPage_SignInButton").click();
+		webElementObject.getWebElement("logInPage_UserTextField").sendKeys("9666854537");
+		webElementObject.getWebElement("logInPage_ContinueButton").click();
+		webElementObject.getWebElement("logInPage_PasswordTextField").sendKeys("asdf123");
+		webElementObject.getWebElement("logInPage_SubmitButton").click();
+		Thread.sleep(5000);
+  }
+
+}
+----------------------------------------------------------------------
+package newpackage;
+
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
+
+public class TestAmazonClass extends TestBaseClass 
+{
+  @Test
+  public void automateAmazonWebElements() throws Exception 
+  {
+	  Actions actionobj = new Actions(driver);
+		actionobj.moveToElement(webElementObject.getWebElement("Menu_Category")).build().perform();
+		actionobj.moveToElement(webElementObject.getWebElement("Choose_ProductType")).build().perform();
+		Thread.sleep(3000);
+		webElementObject.getWebElement("Selected_Screen Protectors").click();
+		Thread.sleep(15000);
+		List<WebElement> divList = webElementObject.getWebElementsList("Div_size");
+		
+		System.out.println("*****Div list size : " + divList.size());
+		
+		for(WebElement div : divList)
+		{
+			
+				
+				Thread.sleep(5000);
+				
+				List<WebElement> productsList = webElementObject.getWebElementsList("ProductsList_Size");
+				
+				System.out.println("Products list size : " + productsList.size());
+				
+			
+				for (WebElement product : productsList) 
+				{
+					
+					
+					Thread.sleep(5000);
+					String productName = product.findElement(webElementObject.getElement("ProductName")).getAttribute("title");
+					System.out.println("productName  :"+productName);
+					WebElement productPrice = product.findElement(webElementObject.getElement("ProductPrice"));
+					try
+					{
+					System.out.println("Product Price  : " + productPrice.getText()); 
+					if(productPrice.getText().isEmpty())
+					{
+						
+						System.out.println("Product Price  : Not Found");
+					}
+					else 
+					{
+						
+						System.out.println("Product Price  : " + productPrice.getText());
+						
+					}
+					
+					}
+					catch(org.openqa.selenium.NoSuchElementException e) 
+					{
+						
+						System.err.println("Element not Found");
+					}
+					 
+		
+					
+				    try { 
+				    	WebElement rating = product.findElement(webElementObject.getElement("ProductRating"));
+				    
+					
+				     System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41)); 
+				   if(rating.getAttribute("class").substring(38, 41).isEmpty())
+				   {
+					  
+					  
+					   System.out.println("Rating : Not Found");
+					   
+				   }
+				   else
+				   {
+					   
+					  System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41).replaceAll(" a", "").replace('-', '.'));
+				   }
+				  
+				   }
+				    catch(org.openqa.selenium.NoSuchElementException e) 
+				    {
+				    	System.err.println("Element not Found");
+				    }
+				    
+				  			  
+				 try { 
+					 WebElement noOfReviews = product.findElement(webElementObject.getElement("ProductnoOfReviews"));
+				 
+				
+				 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  if(noOfReviews.getText().isEmpty())
+					  {
+					 
+					 System.out.println("Reviews : Not Found");
+					  
+					  }
+				  else
+				  {
+					 
+					 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  }
+				  }
+				 catch(org.openqa.selenium.NoSuchElementException e) 
+				 {
+					 System.err.println("Element not Found");
+					
+				 }
+				 
+				
+				 				  
+				 
+				  try{
+					  WebElement isPrimeOrNot = product.findElement(webElementObject.getElement("Product_PrimeorNot"));
+				 
+				  
+				
+				 // System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+				  if(isPrimeOrNot.getAttribute("aria-label").isEmpty())
+						  {
+					 
+					 System.out.println("PrimeOrNot : Not Found ");
+					  
+						  }else
+							  {
+							  
+							  System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+							  
+							  }}
+				  catch(org.openqa.selenium.NoSuchElementException e) {
+					  System.err.println("Element not Found");
+					  
+				  }
+				 
+				  
+				  }
+			}
+	  
+  }
+  String filepath="LocationNameforSaveFile";
+  @AfterTest
+  public void afterTest() throws IOException 
+  {
+	  String[][] productList= new String[100][10];
+		
+		productList[0][0] = "PRODUCT NAMES";
+		productList[0][1] = "PRODUCT PRICE ";
+		productList[0][2] = "RATING";
+		productList[0][3] = "NoOfReviews";
+		productList[0][4] = "PrimeOrNot";
+	  ExcelUtils e = new ExcelUtils();
+		e.WriteToExcel(productList, filepath);
+  }
+
+}
+
+---------------------------------------------------------------------
+package newpackage;
+
+import java.awt.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class UsingTestNgExtractAmazonProductsInXml 
+{
+	WebDriver driver;
+	public static FunctionalityOnWebElement webElementObject;
+	
+	
+	
+	
+	 
+	@BeforeMethod
+	public void beforemethod1() throws Exception
+	{
+		System.out.println("bEFORE Classs Method"); 
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\softwares\\chromedriver.exe");
+		driver= new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+	}
+	
+  @Test
+  public void f() throws Exception 
+  {
+	  System.out.println("tEST Method"); 
+	  webElementObject = new FunctionalityOnWebElement(driver);
+	  webElementObject.getWebElement("logInPage_SignInButton").click();
+		webElementObject.getWebElement("logInPage_UserTextField").sendKeys("9666854537");
+		webElementObject.getWebElement("logInPage_ContinueButton").click();
+		webElementObject.getWebElement("logInPage_PasswordTextField").sendKeys("asdf123");
+		webElementObject.getWebElement("logInPage_SubmitButton").click();
+		Thread.sleep(5000);
+		Actions actionobj = new Actions(driver);
+		actionobj.moveToElement(webElementObject.getWebElement("Menu_Category")).build().perform();
+		actionobj.moveToElement(webElementObject.getWebElement("Choose_ProductType")).build().perform();
+		Thread.sleep(3000);
+		webElementObject.getWebElement("Selected_Screen Protectors").click();
+		Thread.sleep(15000);
+		// got error without java.util.List
+		java.util.List<WebElement> divList = webElementObject.getWebElementsList("Div_size");
+		
+		System.out.println("*****Div list size : " + divList.size());
+		
+		for(WebElement div : divList)
+		{
+			
+				
+				Thread.sleep(5000);
+				// got error without java.util.List
+				java.util.List<WebElement>  productsList = (webElementObject.getWebElementsList("ProductsList_Size"));
+				
+				System.out.println("Products list size : " + productsList.size());
+				
+			
+				for (WebElement product : productsList) 
+				{
+					
+					
+					Thread.sleep(5000);
+					String productName = product.findElement(webElementObject.getElement("ProductName")).getAttribute("title");
+					System.out.println("productName  :"+productName);
+					WebElement productPrice = product.findElement(webElementObject.getElement("ProductPrice"));
+					try
+					{
+					System.out.println("Product Price  : " + productPrice.getText()); 
+					if(productPrice.getText().isEmpty())
+					{
+						
+						System.out.println("Product Price  : Not Found");
+					}
+					else 
+					{
+						
+						System.out.println("Product Price  : " + productPrice.getText());
+						
+					}
+					
+					}
+					catch(org.openqa.selenium.NoSuchElementException e) 
+					{
+						
+						System.err.println("Element not Found");
+					}
+					 
+		
+					
+				    try { 
+				    	WebElement rating = product.findElement(webElementObject.getElement("ProductRating"));
+				    
+					
+				     System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41)); 
+				   if(rating.getAttribute("class").substring(38, 41).isEmpty())
+				   {
+					  
+					  
+					   System.out.println("Rating : Not Found");
+					   
+				   }
+				   else
+				   {
+					   
+					  System.out.println("Rating : " + rating.getAttribute("class").substring(38, 41).replaceAll(" a", "").replace('-', '.'));
+				   }
+				  
+				   }
+				    catch(org.openqa.selenium.NoSuchElementException e) 
+				    {
+				    	System.err.println("Element not Found");
+				    }
+				    
+				  			  
+				 try { 
+					 WebElement noOfReviews = product.findElement(webElementObject.getElement("ProductnoOfReviews"));
+				 
+				
+				 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  if(noOfReviews.getText().isEmpty())
+					  {
+					 
+					 System.out.println("Reviews : Not Found");
+					  
+					  }
+				  else
+				  {
+					 
+					 System.out.println("Reviews : " + noOfReviews.getText()); 
+				  }
+				  }
+				 catch(org.openqa.selenium.NoSuchElementException e) 
+				 {
+					 System.err.println("Element not Found");
+					
+				 }
+				 
+				
+				 				  
+				 
+				  try{
+					  WebElement isPrimeOrNot = product.findElement(webElementObject.getElement("Product_PrimeorNot"));
+				 
+				  
+				
+				 // System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+				  if(isPrimeOrNot.getAttribute("aria-label").isEmpty())
+						  {
+					 
+					 System.out.println("PrimeOrNot : Not Found ");
+					  
+						  }else
+							  {
+							  
+							  System.out.println("PrimeOrNot : " + isPrimeOrNot.getAttribute("aria-label")); 
+							  
+							  }}
+				  catch(org.openqa.selenium.NoSuchElementException e) {
+					  System.err.println("Element not Found");
+					  
+				  }
+				 
+				  
+				  }
+			}
+		
+  }
+  @AfterMethod
+  public void driverclose()
+  {
+	  Actions action=new Actions(driver);
+	  action.moveToElement(driver.findElement(By.id("nav-link-yourAccount"))).build().perform();
+	  driver.findElement(By.id("nav-item-signout")).click();
+	 driver.quit();
+  }
+}
+
