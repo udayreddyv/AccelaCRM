@@ -61,6 +61,7 @@ public class TestBaseClass {
     {
         LoginPage loginPage = new LoginPage(defaultWebDriver);
         loginPage.login(appDetails.getLoginUserName(), appDetails.getLoginUserPassword());
+        
     }
 
     public void killBrowser() {

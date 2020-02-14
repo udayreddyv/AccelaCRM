@@ -6,11 +6,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
@@ -483,6 +486,47 @@ public class DefaultWebDriver {
 			log.error(String.format("Failed to getText  %s", element));
 		}
 		return this.elementText;
+	}
+	
+	public void scrollUpAndDown(String element) {
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			
+			//js.executeScript("arguments[0].scrollIntoView(true);", element);
+			//js.executeScript("window.scrollBy(0,1000)");
+			//WebElement scroll = driver.findElement(element);
+			//scroll.sendKeys(Keys.PAGE_DOWN);
+			//js.executeScript("$(element).animate({ scrollTop: \"100px\" })");
+			js.executeScript("document.getElementById(element).scrollTop(250)");
+			
+
+		} catch (Exception ex) {
+			exceptionMessage = ex.getMessage();
+			log.info("URL exception : "+exceptionMessage);
+			
+		}
+	}
+
+	public void scrollUpAndDownActions() {
+		try {
+			Actions actions = new Actions(driver);
+			actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
+
+		} catch (Exception ex) {
+			exceptionMessage = ex.getMessage();
+			log.info("URL exception : " + exceptionMessage);
+		}
+		}
+		public void dragAndDropBypixcels(By mapImageLocator) {
+			try {
+				Actions actions = new Actions(driver);
+				actions.moveToElement(driver.findElement(mapImageLocator), 114, 94).click();
+				actions.build().perform();
+			} catch (Exception ex) {
+				exceptionMessage = ex.getMessage();
+				log.info("@@@@@@@@@@@@@ error   : "+exceptionMessage);
+				
+			}
 	}
 
 }

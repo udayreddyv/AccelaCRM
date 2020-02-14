@@ -35,6 +35,9 @@ public class LoginPage extends BasePage {
 
 				logInApplication(userName, password);
 				break;
+			case "GOVUSER":
+				logInApplication(userName, password);
+				break;
 			case "IFRAME":
 				logInApplication(userName, password);
 				break;
@@ -60,10 +63,12 @@ public class LoginPage extends BasePage {
 	 * @param userName : userName as string format
 	 * @param password : password as string format
 	 */
+	 private String userNameData;
 	public void logInApplication(String userName, String password) {
-		driver.typeText(userNameTextField, userName);
-		driver.typeText(passwordTextField, password);
+		driver.typeText(userNameTextField, userName);		
+		driver.typeText(passwordTextField, password);		
 		driver.clickOnElement(loginButton);
+		
 
 	}
 
@@ -79,5 +84,13 @@ public class LoginPage extends BasePage {
 			throw new FrameworkException(ex.toString());
 		}
 		log.info("End of the method - login");
+	}
+
+	public String getUserNameData() {
+		return userNameData;
+	}
+
+	public void setUserNameData(String userNameData) {
+		this.userNameData = userNameData;
 	}
 }
