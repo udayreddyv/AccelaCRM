@@ -13,9 +13,9 @@ import com.accelacrm.test.pages.govdepartment.RequestTypePage;
 import com.accelacrm.test.pages.govdepartment.UsersPage;
 import com.accelacrm.test.pages.govdepartment.WorkflowPage;
 
-
 public class GovDepartmentTest extends TestBaseClass {
 
+	// Verify To Create Department Name
 	@Test
 	public void createToDepartmentName() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -26,6 +26,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertAll();
 	}
+	// Verify To Create WorkFlow
 
 	@Test
 	public void createToManageWorkflow() {
@@ -42,6 +43,8 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertAll();
 	}
+
+	// Verify To Modify Workflow
 	@Test
 	public void modifyToeWorkflow() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -54,15 +57,17 @@ public class GovDepartmentTest extends TestBaseClass {
 		String deptName = departmentPage.departmentName;
 		WorkflowPage workflowPage = homePage.goToManageWorkflow();
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
-		String wrokflowName =workflowPage.workflowName;
+		String wrokflowName = workflowPage.workflowName;
 		String atualSuccessMessageForWorkflowUpdation = workflowPage.goToModifyWorkflow(wrokflowName);
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertEquals(atualSuccessMessageForWorkflowUpdation, expectedSuccessMessageForWorkflowUpdation);
 		softAssert.assertAll();
 	}
+
+	// Verify To Create Request Type
 	@Test
-	public void createToManageReuestType() {
+	public void createToManageRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
 		String expectedSuccessMessageForReuestType = classLevelData.get("expectedSuccessMessageForReuestType");
@@ -75,12 +80,14 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType= reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertEquals(actualSuccessMessageForReuestType, expectedSuccessMessageForReuestType);
 		softAssert.assertAll();
 	}
+
+	// Verify To Modify Request Type
 	@Test
 	public void goToModifyManageRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -96,14 +103,18 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType= reuestTypePage.goToCreateNewRequestType("0 Test 0");
-		String acutalSuccessfullMessageForModifyRequestType = reuestTypePage.goToEditExistedRequestType(reuestTypePage.requestTypeName);
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String acutalSuccessfullMessageForModifyRequestType = reuestTypePage
+				.goToEditExistedRequestType(reuestTypePage.requestTypeName);
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertEquals(actualSuccessMessageForReuestType, expectedSuccessMessageForReuestType);
-		softAssert.assertEquals(acutalSuccessfullMessageForModifyRequestType, expectedSuccessfullMessageForModifyRequestType);
+		softAssert.assertEquals(acutalSuccessfullMessageForModifyRequestType,
+				expectedSuccessfullMessageForModifyRequestType);
 		softAssert.assertAll();
 	}
+
+	// Verify To Add Custom Field in Request Type
 	@Test
 	public void goToAddCustomFieldForRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -122,8 +133,8 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertAll();
 	}
-	
-	
+	// Verify To Create New Request from Department
+
 	@Test
 	public void createToNewReuest() {
 		String expectedSuccessMessage = "has been submitted successfully, click here to view it.";
@@ -136,126 +147,140 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType= reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
 		String requestTypeName = reuestTypePage.requestTypeName;
 		ReuestPage reuestPage = homePage.goToRequestTab();
 		String actualSuccessMessageForNR = reuestPage.goToCreateNewReuest(requestTypeName);
 		softAssert.assertEquals(actualSuccessMessageForNR, expectedSuccessMessage, "Not Matched");
 		softAssert.assertAll();
-				
+
 	}
+
+	// Verify To Create New Report
 	@Test
 	public void createNewReport() {
 		HomePage homePage = new HomePage(defaultWebDriver);
 		ReportPage reportPage = homePage.goToReportTab();
 		reportPage.createNewReport();
-		homePage.goToLogOut();		
+		homePage.goToLogOut();
 	}
+
+	// Verify To Create New User
 	@Test
 	public void createToUsers() {
 		String expectedStatusMessage = "Action Successful";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		UsersPage usersPage = homePage.goToManageUsers();
-		String actualStatusMessage =usersPage.createUser();
-		homePage.goToLogOut();	
-		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage,"Not Matched");
-		softAssert.assertAll();		
+		String actualStatusMessage = usersPage.createUser();
+		homePage.goToLogOut();
+		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage, "Not Matched");
+		softAssert.assertAll();
 	}
+
+	// Verify To Share Reports to User
 	@Test
 	public void shareReportsToUser() {
 		String expectedStatusMessage = "Action Successful";
 		String expectedStatusMessageSReport = "Shared successfully with 1 person";
-		
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		UsersPage usersPage = homePage.goToManageUsers();
-		String actualStatusMessage =usersPage.createUser();
+		String actualStatusMessage = usersPage.createUser();
 		String recipient = usersPage.details;
-		System.out.println("$$$$$$$$$$$$$$$$$$$$ : "+recipient);
-		
-		
 		ReportPage reportPage = homePage.goToReportTab();
-		String actualStatusMessageSReport =reportPage.goToShareReports(recipient);
-		//homePage.goToLogOut();	
-		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage,"Not Matched");
+		String actualStatusMessageSReport = reportPage.goToShareReports(recipient);
+		// homePage.goToLogOut();
+		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage, "Not Matched");
 		softAssert.assertEquals(actualStatusMessageSReport, expectedStatusMessageSReport, "Not Matched");
-		softAssert.assertAll();		
+		softAssert.assertAll();
 	}
+
+	// Verify To Create Public People
 	@Test
 	public void CreateToPublicPeople() {
 		String expectedStatusMessage = "Save successful!";
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		ContentPage contentPage = homePage.goToContentTabThenPublicPeople();
 		String actualStatusMessage = contentPage.goToaddPublicPeople();
 		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage);
-		softAssert.assertAll();		
+		softAssert.assertAll();
 	}
+
+	// Verify To Modify Public People
 	@Test
 	public void modifyToPublicPeople() {
 		String expectedStatusMessageUpdate = "Save successful!";
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		ContentPage contentPage = homePage.goToContentTabThenPublicPeople();
 		String actualStatusMessage = contentPage.goToaddPublicPeople();
 		String firstNameText = contentPage.frstName;
-		String actualStatusMessageUpdate  = contentPage.goToModifyPublicPeople(firstNameText);
+		String actualStatusMessageUpdate = contentPage.goToModifyPublicPeople(firstNameText);
 		softAssert.assertEquals(actualStatusMessage, expectedStatusMessageUpdate);
 		softAssert.assertEquals(actualStatusMessageUpdate, expectedStatusMessageUpdate);
-		softAssert.assertAll();		
-		
+		softAssert.assertAll();
+
 	}
+
+	// Verify To Create Places
 	@Test
 	public void createToPlaces() {
 		String expectedStatusMessage = "saved";
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		ContentPage contentPage = homePage.goToContentTabThenPlace();
 		String actualStatusMessage = contentPage.goToAddPlaces();
 		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage);
-		softAssert.assertAll();		
+		softAssert.assertAll();
 	}
+
+	// Verify To Create FAQ
 	@Test
 	public void createToFAQ() {
 		String expectedStatusMessageFAQ = "Post successful!";
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		ContentPage contentPage = homePage.goToContentTabThenFAQ();
 		String actualStatusMessageFAQ = contentPage.goToAddFAQPost();
 		softAssert.assertEquals(actualStatusMessageFAQ, expectedStatusMessageFAQ);
-		softAssert.assertAll();		
+		softAssert.assertAll();
 	}
+
+	// Verify To Modify FAQ
 	@Test
 	public void modifyToFAQ() {
 		String expectedStatusMessageFAQ = "Post successful!";
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		ContentPage contentPage = homePage.goToContentTabThenFAQ();
 		String actualStatusMessageFAQ = contentPage.goToAddFAQPost();
 		String actualMessage = contentPage.goToModifyExistedFAQPost(contentPage.questionText);
-		System.out.println("******************************* : "+actualMessage);
+		System.out.println("******************************* : " + actualMessage);
 		softAssert.assertEquals(actualStatusMessageFAQ, expectedStatusMessageFAQ);
-		softAssert.assertAll();		
+		softAssert.assertAll();
 	}
+
+	// Verify To Global Search
 	@Test
 	public void goToSearchGlobal() {
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		homePage.goToEnterTextInSearchBox(appDetails.getLoginUserName());
-		
+
 	}
-	
+	// Verify To New User
+
 	@Test
-	public void goToNewUser(){
+	public void goToNewUser() {
 		String expectedUrl = "https://gov-stage.publicstuff.com/dashboard";
-		SoftAssert softAssert =  new SoftAssert();
+		SoftAssert softAssert = new SoftAssert();
 		defaultWebDriver.wait(5000);
 		String actualUrl = defaultWebDriver.getCurrentUrl();
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@  NewUser Successfull: "+actualUrl);
 		softAssert.assertEquals(actualUrl, expectedUrl);
 		softAssert.assertAll();
-		
+
 	}
-	
+
 }
