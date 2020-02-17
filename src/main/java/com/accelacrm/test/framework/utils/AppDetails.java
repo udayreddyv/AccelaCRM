@@ -20,7 +20,7 @@ public class AppDetails {
          }
 
     public String getBrowserName() {
-        return browserName;
+        return "chrome";
     }
 
     public String getAppUrl()

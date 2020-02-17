@@ -13,7 +13,7 @@ import java.net.URLDecoder;
 public class BrowserSetup {
 
     private static final String BROWSERNAME_CHROME = "chrome";
-
+    
     public DefaultWebDriver getWebDriver(String browserName) {
         WebDriver driver = null;
         DefaultWebDriver defaultWebDriver = null;
