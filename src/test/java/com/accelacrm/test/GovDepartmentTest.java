@@ -262,7 +262,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Global Search
+	// Verify The Global Search
 	@Test
 	public void goToSearchGlobal() {
 		SoftAssert softAssert = new SoftAssert();
