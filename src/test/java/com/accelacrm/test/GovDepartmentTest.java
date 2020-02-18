@@ -14,10 +14,9 @@ import com.accelacrm.test.pages.govdepartment.UsersPage;
 import com.accelacrm.test.pages.govdepartment.WorkflowPage;
 
 public class GovDepartmentTest extends TestBaseClass {
-
-	// Verify To Create Department Name
+	// Verify The Create Department Name
 	@Test
-	public void createToDepartmentName() {
+	public void createTheDepartmentName() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -29,7 +28,7 @@ public class GovDepartmentTest extends TestBaseClass {
 	
 	// Verify The Create WorkFlow
 	@Test
-	public void createToManageWorkflow() {
+	public void createTheWorkflow() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
 		SoftAssert softAssert = new SoftAssert();
@@ -46,7 +45,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Edit Workflow
 	@Test
-	public void modifyToeWorkflow() {
+	public void modifyTheWorkflow() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
 		String expectedSuccessMessageForWorkflowUpdation = "Workflow successfully updated";
@@ -80,7 +79,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertEquals(actualSuccessMessageForReuestType, expectedSuccessMessageForReuestType);
@@ -103,7 +102,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
 		String acutalSuccessfullMessageForModifyRequestType = reuestTypePage
 				.goToEditExistedRequestType(reuestTypePage.requestTypeName);
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
@@ -128,7 +127,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		reuestTypePage.goToAddRequestTypeCustomField("0 Test 0");
+		reuestTypePage.goToAddRequestTypeCustomField("Default Workflow");
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertAll();
@@ -147,7 +146,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
 		String requestTypeName = reuestTypePage.requestTypeName;
 		ReuestPage reuestPage = homePage.goToRequestTab();
 		String actualSuccessMessageForNR = reuestPage.goToCreateNewReuest(requestTypeName);
