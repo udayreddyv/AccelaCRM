@@ -26,8 +26,8 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertAll();
 	}
-	// Verify To Create WorkFlow
-
+	
+	// Verify The Create WorkFlow
 	@Test
 	public void createToManageWorkflow() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -44,7 +44,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Modify Workflow
+	// Verify The Edit Workflow
 	@Test
 	public void modifyToeWorkflow() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -65,7 +65,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Create Request Type
+	// Verify The Create Request Type
 	@Test
 	public void createToManageRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -87,7 +87,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Modify Request Type
+	// Verify The Edit Request Type
 	@Test
 	public void goToModifyManageRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -114,7 +114,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Add Custom Field in Request Type
+	// Verify The Add Custom Field in Request Type
 	@Test
 	public void goToAddCustomFieldForRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -133,8 +133,8 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertAll();
 	}
-	// Verify To Create New Request from Department
-
+	
+	// Verify The Create New Request from Department
 	@Test
 	public void createToNewReuest() {
 		String expectedSuccessMessage = "has been submitted successfully, click here to view it.";
@@ -156,7 +156,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	}
 
-	// Verify To Create New Report
+	// Verify The Create New Report
 	@Test
 	public void createNewReport() {
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -165,7 +165,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		homePage.goToLogOut();
 	}
 
-	// Verify To Create New User
+	// Verify The Create New User
 	@Test
 	public void createToUsers() {
 		String expectedStatusMessage = "Action Successful";
@@ -178,7 +178,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Share Reports to User
+	// Verify The Share Reports to User
 	@Test
 	public void shareReportsToUser() {
 		String expectedStatusMessage = "Action Successful";
@@ -196,7 +196,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Create Public People
+	// Verify The Create Public People
 	@Test
 	public void CreateToPublicPeople() {
 		String expectedStatusMessage = "Save successful!";
@@ -208,7 +208,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Modify Public People
+	// Verify The Edit Public People
 	@Test
 	public void modifyToPublicPeople() {
 		String expectedStatusMessageUpdate = "Save successful!";
@@ -224,7 +224,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	}
 
-	// Verify To Create Places
+	// Verify The Create Places
 	@Test
 	public void createToPlaces() {
 		String expectedStatusMessage = "saved";
@@ -236,7 +236,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Create FAQ
+	// Verify The Create FAQ
 	@Test
 	public void createToFAQ() {
 		String expectedStatusMessageFAQ = "Post successful!";
@@ -248,7 +248,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 
-	// Verify To Modify FAQ
+	// Verify The Edit FAQ
 	@Test
 	public void modifyToFAQ() {
 		String expectedStatusMessageFAQ = "Post successful!";
@@ -270,7 +270,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		homePage.goToEnterTextInSearchBox(appDetails.getLoginUserName());
 
 	}
-	// Verify To New User
+	// Verify The New User
 
 	@Test
 	public void goToNewUser() {
