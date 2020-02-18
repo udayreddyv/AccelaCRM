@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.accelacrm.test.SampleTest">
+      <class name="com.accelacrm.test.GovDepartmentTest">
         <methods>
-          <include name="setupTest"/>
-          <include name="setupBeforeMethod"/>
+          <include name="createToPlaces"/>
+          <include name="shareReportsToUser"/>
+          <include name="createToManageWorkflow"/>
+          <include name="modifyToPublicPeople"/>
           <include name="tearDownAfterMethod"/>
-          <include name="samplemethod"/>
+          <include name="modifyToeWorkflow"/>
+          <include name="createToManageRequestType"/>
+          <include name="createToNewReuest"/>
+          <include name="createToFAQ"/>
+          <include name="goToNewUser"/>
+          <include name="setupTest"/>
+          <include name="goToModifyManageRequestType"/>
+          <include name="setupBeforeMethod"/>
+          <include name="createToDepartmentName"/>
+          <include name="createToUsers"/>
+          <include name="goToAddCustomFieldForRequestType"/>
+          <include name="createNewReport"/>
+          <include name="goToSearchGlobal"/>
+          <include name="modifyToFAQ"/>
+          <include name="CreateToPublicPeople"/>
         </methods>
-      </class> <!-- com.accelacrm.test.SampleTest -->
+      </class> <!-- com.accelacrm.test.GovDepartmentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

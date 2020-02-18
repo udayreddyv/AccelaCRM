@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results ignored="0" total="17" passed="0" failed="0" skipped="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48" started-at="2020-01-29T17:06:05 IST" finished-at="2020-01-29T17:06:06 IST">
+  <suite started-at="2020-02-18T08:51:53 IST" name="Default suite" finished-at="2020-02-18T08:51:59 IST" duration-ms="5231">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48" started-at="2020-01-29T17:06:05 IST" finished-at="2020-01-29T17:06:06 IST">
-      <class name="com.accelacrm.test.SampleTest">
-        <test-method status="PASS" signature="setupTest(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.SampleTest@1b68ddbd]" name="setupTest" is-config="true" duration-ms="120" started-at="2020-01-29T17:06:05 IST" finished-at="2020-01-29T17:06:05 IST">
+    <test started-at="2020-02-18T08:51:53 IST" name="Default test" finished-at="2020-02-18T08:51:59 IST" duration-ms="5231">
+      <class name="com.accelacrm.test.GovDepartmentTest">
+        <test-method is-config="true" signature="setupTest(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:53 IST" name="setupTest" finished-at="2020-02-18T08:51:53 IST" duration-ms="357" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@59717824]]>
+                <![CDATA[org.testng.TestRunner@7829b776]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method status="FAIL" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.SampleTest@1b68ddbd]" name="setupBeforeMethod" is-config="true" duration-ms="2" started-at="2020-01-29T17:06:05 IST" finished-at="2020-01-29T17:06:05 IST">
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:53 IST" name="setupBeforeMethod" finished-at="2020-02-18T08:51:58 IST" duration-ms="5021" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.accelacrm.test.SampleTest.samplemethod()]]>
+                <![CDATA[public void com.accelacrm.test.GovDepartmentTest.CreateToPublicPeople()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@59717824]]>
+                <![CDATA[org.testng.TestRunner@7829b776]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.accelacrm.test.framework.selenium.BrowserSetup.getWebDriver(BrowserSetup.java:21)
-at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:48)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -52,7 +56,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1255)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 at org.testng.TestRunner.privateRun(TestRunner.java:770)
 at org.testng.TestRunner.run(TestRunner.java:591)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
@@ -70,20 +74,24 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeMethod -->
-        <test-method status="SKIP" signature="samplemethod()[pri:0, instance:com.accelacrm.test.SampleTest@1b68ddbd]" name="samplemethod" duration-ms="0" started-at="2020-01-29T17:06:06 IST" finished-at="2020-01-29T17:06:06 IST">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="CreateToPublicPeople()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="CreateToPublicPeople" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.accelacrm.test.framework.selenium.BrowserSetup.getWebDriver(BrowserSetup.java:21)
-at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:48)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -96,7 +104,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1255)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 at org.testng.TestRunner.privateRun(TestRunner.java:770)
 at org.testng.TestRunner.run(TestRunner.java:591)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
@@ -114,15 +122,911 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- samplemethod -->
-        <test-method status="SKIP" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.SampleTest@1b68ddbd]" name="tearDownAfterMethod" is-config="true" duration-ms="-1580297766019" started-at="2020-01-29T17:06:06 IST" finished-at="1970-01-01T05:30:00 IST">
+        </test-method> <!-- CreateToPublicPeople -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118935" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterMethod -->
-      </class> <!-- com.accelacrm.test.SampleTest -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118938" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createNewReport()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="createNewReport" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewReport -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118948" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118950" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToDepartmentName()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="createToDepartmentName" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToDepartmentName -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118960" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118964" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToFAQ()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="createToFAQ" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToFAQ -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118970" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118971" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToManageRequestType()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="createToManageRequestType" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToManageRequestType -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118975" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118977" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToManageWorkflow()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="createToManageWorkflow" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToManageWorkflow -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118995" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996118996" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToNewReuest()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:58 IST" name="createToNewReuest" finished-at="2020-02-18T08:51:58 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToNewReuest -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119003" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119004" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToPlaces()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="createToPlaces" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToPlaces -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119031" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119037" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="createToUsers()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="createToUsers" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToUsers -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119043" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119049" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="goToAddCustomFieldForRequestType()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="goToAddCustomFieldForRequestType" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToAddCustomFieldForRequestType -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119056" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119058" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="goToModifyManageRequestType()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="goToModifyManageRequestType" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToModifyManageRequestType -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119063" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119066" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="goToNewUser()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="goToNewUser" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToNewUser -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119070" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119071" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="goToSearchGlobal()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="goToSearchGlobal" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToSearchGlobal -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119076" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119078" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="modifyToFAQ()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="modifyToFAQ" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyToFAQ -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119081" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119082" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="modifyToPublicPeople()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="modifyToPublicPeople" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyToPublicPeople -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119087" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119088" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="modifyToeWorkflow()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="modifyToeWorkflow" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyToeWorkflow -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119093" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+        <test-method is-config="true" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="setupBeforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119094" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeMethod -->
+        <test-method signature="shareReportsToUser()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="shareReportsToUser" finished-at="2020-02-18T08:51:59 IST" duration-ms="0" status="SKIP">
+          <exception class="com.accelacrm.test.framework.selenium.exception.FrameworkException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.accelacrm.test.framework.selenium.exception.FrameworkException: java.lang.NullPointerException
+at com.accelacrm.test.pages.citizen.login.LoginPage.login(LoginPage.java:66)
+at com.accelacrm.test.framework.selenium.TestBaseClass.loginSetup(TestBaseClass.java:63)
+at com.accelacrm.test.framework.selenium.TestBaseClass.setupBeforeMethod(TestBaseClass.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:510)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.accelacrm.test.framework.selenium.exception.FrameworkException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shareReportsToUser -->
+        <test-method is-config="true" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@161479c6]" started-at="2020-02-18T08:51:59 IST" name="tearDownAfterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1581996119098" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterMethod -->
+      </class> <!-- com.accelacrm.test.GovDepartmentTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
