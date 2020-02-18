@@ -66,7 +66,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Create Request Type
 	@Test
-	public void createToManageRequestType() {
+	public void createTheRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
 		String expectedSuccessMessageForReuestType = classLevelData.get("expectedSuccessMessageForReuestType");
@@ -88,7 +88,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Edit Request Type
 	@Test
-	public void goToModifyManageRequestType() {
+	public void modifyRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
 		String expectedSuccessMessageForReuestType = classLevelData.get("expectedSuccessMessageForReuestType");
@@ -115,7 +115,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Add Custom Field in Request Type
 	@Test
-	public void goToAddCustomFieldForRequestType() {
+	public void addCustomFieldForRequestType() {
 		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
 		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
 		SoftAssert softAssert = new SoftAssert();
@@ -133,9 +133,9 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 	
-	// Verify The Create New Request from Department
+	// Verify The Create New Request from admin
 	@Test
-	public void createToNewReuest() {
+	public void createTheNewRequest() {
 		String expectedSuccessMessage = "has been submitted successfully, click here to view it.";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -166,7 +166,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Create New User
 	@Test
-	public void createToUsers() {
+	public void createNewUser() {
 		String expectedStatusMessage = "Action Successful";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -179,7 +179,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Share Reports to User
 	@Test
-	public void shareReportsToUser() {
+	public void shareReportToUser() {
 		String expectedStatusMessage = "Action Successful";
 		String expectedStatusMessageSReport = "Shared successfully with 1 person";
 		SoftAssert softAssert = new SoftAssert();
@@ -197,7 +197,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Create Public People
 	@Test
-	public void CreateToPublicPeople() {
+	public void createThePublicPeople() {
 		String expectedStatusMessage = "Save successful!";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -209,7 +209,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Edit Public People
 	@Test
-	public void modifyToPublicPeople() {
+	public void modifyThePublicPeople() {
 		String expectedStatusMessageUpdate = "Save successful!";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -225,7 +225,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Create Places
 	@Test
-	public void createToPlaces() {
+	public void createThePlaces() {
 		String expectedStatusMessage = "saved";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -237,7 +237,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Create FAQ
 	@Test
-	public void createToFAQ() {
+	public void createTheFAQ() {
 		String expectedStatusMessageFAQ = "Post successful!";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -249,7 +249,7 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Edit FAQ
 	@Test
-	public void modifyToFAQ() {
+	public void modifyTheFAQ() {
 		String expectedStatusMessageFAQ = "Post successful!";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
@@ -263,14 +263,14 @@ public class GovDepartmentTest extends TestBaseClass {
 
 	// Verify The Global Search
 	@Test
-	public void goToSearchGlobal() {
+	public void verifyGlobalSearch() {
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		homePage.goToEnterTextInSearchBox(appDetails.getLoginUserName());
 
 	}
+	
 	// Verify The New User
-
 	@Test
 	public void goToNewUser() {
 		String expectedUrl = "https://gov-stage.publicstuff.com/dashboard";
