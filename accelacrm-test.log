@@ -1,20 +1,31 @@
-2020-02-18 08:51:53 INFO  PropertiesLoader:20 - Loading environment properties
-2020-02-18 08:51:53 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
-2020-02-18 08:51:53 INFO  PropertiesLoader:43 - Loading class level properties
-2020-02-18 08:51:53 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
-2020-02-18 08:51:53 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
-2020-02-18 08:51:53 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
-2020-02-18 08:51:53 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
-2020-02-18 08:51:53 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
-2020-02-18 08:51:53 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
-2020-02-18 08:51:53 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
-2020-02-18 08:51:53 INFO  PropertiesLoader:77 - Loading CreateToPublicPeople method level properties
-2020-02-18 08:51:53 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/CreateToPublicPeople.properties
-2020-02-18 08:51:53 ERROR PropertiesLoader:93 - Failed to load method level properties
-2020-02-18 08:51:53 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
-2020-02-18 08:51:53 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
-2020-02-18 08:51:58 INFO  DefaultWebDriver:49 - Opening url : null
-2020-02-18 08:51:58 INFO  DefaultWebDriver:53 - URL exception : null value in entry: url=null
-2020-02-18 08:51:58 ERROR DefaultWebDriver:54 - Failed to open url null
-2020-02-18 08:51:58 INFO  LoginPage:41 - Start of the method - login
-2020-02-18 08:51:58 ERROR LoginPage:65 - Failed to login
+2020-02-18 16:22:10 INFO  PropertiesLoader:20 - Loading environment properties
+2020-02-18 16:22:10 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 16:22:10 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 16:22:10 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 16:22:10 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 16:22:10 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 16:22:10 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 16:22:10 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 16:22:10 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 16:22:10 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 16:22:10 INFO  PropertiesLoader:77 - Loading modifyToeWorkflow method level properties
+2020-02-18 16:22:10 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/modifyToeWorkflow.properties
+2020-02-18 16:22:10 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 16:22:10 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 16:22:10 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 16:22:14 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 16:22:16 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 16:22:19 INFO  LoginPage:68 - End of the method - login
+2020-02-18 16:22:19 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 16:22:23 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 16:22:23 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 16:22:24 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 16:22:24 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 16:22:25 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 16:22:25 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 16:22:26 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 16:22:36 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 16:22:36 INFO  LoginPage:56 - Start method for goToModifyWorkflow
+2020-02-18 16:22:37 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 16:22:52 ERROR DefaultWebDriver:213 - Failed to getText  By.xpath: //div[text()='Workflow successfully created']
+2020-02-18 16:22:52 INFO  LoginPage:70 - End method for goToModifyWorkflow
