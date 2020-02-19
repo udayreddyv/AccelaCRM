@@ -14,6 +14,7 @@ import com.accelacrm.test.pages.govdepartment.UsersPage;
 import com.accelacrm.test.pages.govdepartment.WorkflowPage;
 
 public class GovDepartmentTest extends TestBaseClass {
+	
 	// Verify The Create Department Name
 	@Test
 	public void createTheDepartmentName() {
@@ -133,7 +134,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertAll();
 	}
 	
-	// Verify The Create New Request from admin
+	// Verify The Create New Request
 	@Test
 	public void createTheNewRequest() {
 		String expectedSuccessMessage = "has been submitted successfully, click here to view it.";
