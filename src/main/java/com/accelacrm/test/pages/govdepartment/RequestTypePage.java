@@ -35,7 +35,12 @@ public class RequestTypePage extends BasePage {
 	private static final By submitcustomFieldAddButton = By.xpath("//button[@type='submit'][text()='Add']");
 	private static final By customFieldMakeFieldOptional = By.xpath("//*[@id=\"add-object-field\"]/div[1]/div[4]/div[1]/div[2]/div[2]/div/div/div/label");
 	
-	 public String requestTypeName;
+	private static final By deleteButton = By.xpath("//a[text()='Delete']");
+	private static final By requestMovigDropdown = By.xpath("//span[text()='Select Request Type']");
+	private static final By selectForMoveRequestType = By.xpath("//ul[@role='listbox']/descendant::div[text()='Fire']");
+	private static final By moveButton = By.xpath("//button[text()='Move']");
+	
+	public String requestTypeName;
 	public String goToCreateNewRequestType(String workflowName) {
 		log.info("Start method for - goToCreateNewRequestType");
 		String actualStatusOfReuestType;
@@ -44,6 +49,7 @@ public class RequestTypePage extends BasePage {
 			driver.typeText(reuestTypeNameText, requestTypeName);
 			driver.clickOnElement(workflowNameDropdownButtton);
 			driver.clickOnElement(By.xpath(String.format(selectWorkflowName, workflowName)));
+			driver.wait(WAIT_SMALL);
 			driver.clickOnElement(saveButton);
 			String  actualStatusOfReuestTypeOriginal = driver.getTextFromElement(statusOfReuestType);	
 			actualStatusOfReuestType = (String) actualStatusOfReuestTypeOriginal.subSequence(17, 46);
@@ -96,6 +102,25 @@ public class RequestTypePage extends BasePage {
 		
 	}
 	
-	
+	public void goToDeleteRequestType(String newRequestTypeName) {
+		log.info("Start method for - goToDeleteRequestType");
+		
+		try {
+			driver.navigateToRefresh();
+			driver.clickOnElement(By.xpath(String.format(requestTypeList, newRequestTypeName)));
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(deleteButton);
+			driver.clickOnElement(requestMovigDropdown);
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(selectForMoveRequestType);
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(moveButton);				
+			
+			} catch (Exception ex) {
+			log.error("Failed go To DeleteRequestType");
+			throw new FrameworkException(ex.toString());			
+		}
+		log.info("End method for - goToDeleteRequestType");
+	}	
 	
 }

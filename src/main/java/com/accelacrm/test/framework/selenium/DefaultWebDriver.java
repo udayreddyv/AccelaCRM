@@ -344,6 +344,15 @@ public class DefaultWebDriver {
 			log.error(String.format("Unable to switc to alert %s"));
 		}
 	}
+	public void navigateToRefresh() {
+
+		try {
+			driver.navigate().refresh();
+		} catch (Exception ex) {
+			exceptionMessage = ex.getMessage();
+			log.error(String.format("Unable to switc to alert %s"));
+		}
+	}
 
 	/**
 	 * isElementPresentAndVisible : To verify whether element is present or not

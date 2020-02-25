@@ -19,8 +19,14 @@ public class DepartmentPage extends BasePage{
 
 	private static final Logger log = LogManager.getLogger(DepartmentPage.class);
 	private static final By departmentNameTextBox = By.xpath("//form[@id='dept-add']//input[@id='dept-name']");
+	private static final By editdepNameTextBox = By.xpath("//form[@id='dept-edit']//input[@id='dept-name']");
 	private static final By saveButton = By.xpath("//form[@id='dept-add']//input[@name='submitBtn']");
+	private static final By afterModifySaveButton = By.xpath("//a[@id='dept-delete-modal-btn']/preceding-sibling::input");
 	private static final By successText = By.xpath("//div[@class='alert alert-success success-message dept-added hide']");
+	private static final By afterModifySuccessText = By.xpath("//div[@class='alert alert-success success-message dept-edited hide']");
+	private static final By DeleteButtonAtAlert = By.cssSelector("a#dept-delete-btn");
+	private static final String deptList = "//ul[@id='dept-list']/descendant::a[text()='%s']";
+	private static final By deleteButton = By.cssSelector("a#dept-delete-modal-btn");
 	
 	public String departmentName;
 	
@@ -40,5 +46,44 @@ public class DepartmentPage extends BasePage{
 		log.info("End Method for - goToCreateDepartmentName");
 		return actualMessage;
 	}
+	public String goToModifyDepartmentName(String deptName) {
+		String actualMessage;
+		log.info("Start Method for - goToModifyDepartmentName");
+		try {
+			driver.clickOnElement(By.xpath(String.format(deptList, deptName)));
+			driver.wait(WAIT_SMALL);
+			driver.typeText(editdepNameTextBox, "_Modified");
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(afterModifySaveButton);
+			actualMessage = driver.getTextFromElement(afterModifySuccessText);
+			
+		} catch (Exception ex) {
+			log.error("Failed  go To ModifyDepartmentName");
+			throw new FrameworkException(ex.toString());
+		}
+		log.info("End Method for - goToModifyDepartmentName");
+		return actualMessage;
+	}
+
+	public boolean goToDeleteDepartmentName(String deptName) {
+		boolean isVisible ;
+		log.info("Start Method for - goToDeleteDepartmentName");
+		try {
+			driver.clickOnElement(By.xpath(String.format(deptList, deptName)));
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(deleteButton);
+			driver.clickOnElement(DeleteButtonAtAlert);
+			driver.navigateToRefresh();
+			isVisible =driver.isElementPresentAndVisible(By.xpath(String.format(deptList, deptName)));
+				
+		} catch (Exception ex) {
+			log.error("Failed go To DeleteDepartmentName");
+			throw new FrameworkException(ex.toString());
+		}
+		log.info("End Method for - goToDeleteDepartmentName");
+		return isVisible;
+		
+	}
+
 
 }

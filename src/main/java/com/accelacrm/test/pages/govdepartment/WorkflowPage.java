@@ -26,9 +26,11 @@ public class WorkflowPage extends BasePage {
 	private static final By statusMessageForEditSave = By.xpath("//div[text()='Workflow successfully updated']");
 	private static final By saveButton = By.xpath("//h2[@class='new-header']//a[contains(text(),'Save')]");
 	private static final By EditsaveButton = By.xpath("//h2[@class='edit-header hide']//a[contains(text(),'Save')]");
+	private static final By statusMessageForDelete = By.xpath("//div[text()='Workflow successfully deleted']");
+	private static final By optionDropdown = By.cssSelector("span.ps-dropdowntriangle");
+	private static final By DeleteButton = By.xpath("//a[@data-action='delete-workflow']");
 	
-	
-	private static final String requiredValue = "//div[@class='workflow-list-container']//ul/li[text()='%s']";
+	private static final String selectRequiredWrflwName = "//div[@class='workflow-list-container']//ul/li[text()='%s']";
 	
 	public String workflowName;
 	
@@ -51,13 +53,12 @@ public class WorkflowPage extends BasePage {
 		log.info("End method for goToCreateWorkflow");
 		return actualStatusForWorkflowCreation;
 	}
-	
 	public String goToModifyWorkflow(String workflowName) {
 		log.info("Start method for goToModifyWorkflow");
 				String actualStatusForWorkflowUpdate;
 		try {
 			
-			driver.clickOnElement(By.xpath(String.format(requiredValue, workflowName)));
+			driver.clickOnElement(By.xpath(String.format(selectRequiredWrflwName, workflowName)));
 			driver.wait(WAIT_SMALL);
 			driver.typeText(workflowNameText, "_Modify");
 						driver.clickOnElement(EditsaveButton);
@@ -69,5 +70,24 @@ public class WorkflowPage extends BasePage {
 		}
 		log.info("End method for goToModifyWorkflow");
 		return actualStatusForWorkflowUpdate;
+	}
+	
+	public String goToDeleteWorkflow(String workflowName) {
+		log.info("Start method for goToDeleteWorkflow");
+		String actualStatusForWrkfDelete;
+		try {
+
+			driver.clickOnElement(By.xpath(String.format(selectRequiredWrflwName, workflowName)));
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(optionDropdown);
+			driver.clickOnElement(DeleteButton);
+			actualStatusForWrkfDelete = driver.getTextFromElement(statusMessageForDelete);
+			driver.wait(WAIT_MEDIUM);
+		} catch (Exception ex) {
+			log.error("Failed goTo DeleteWorkflow");
+			throw new FrameworkException(ex.toString());
+		}
+		log.info("End method for goToDeleteWorkflow");
+		return actualStatusForWrkfDelete;
 	}
 }

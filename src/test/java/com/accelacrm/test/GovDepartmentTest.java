@@ -26,6 +26,36 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertAll();
 	}
+	// Verify To Modify Department Name
+	@Test
+	public void modifyTheDepartmentName() {
+		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
+		String expectedSuccessMessageForModify = "Success! Department Updated.";
+		SoftAssert softAssert = new SoftAssert();
+		HomePage homePage = new HomePage(defaultWebDriver);
+		DepartmentPage departmentPage = homePage.goToManageDepartment();
+		String actualSuccessMessage = departmentPage.goToCreateDepartmentName();
+		String deptName = departmentPage.departmentName;
+		String actualSuccessMessageForModify = departmentPage.goToModifyDepartmentName(deptName);
+		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
+		softAssert.assertEquals(actualSuccessMessageForModify, expectedSuccessMessageForModify);
+		softAssert.assertAll();
+	}
+	
+	// Verify To Delete Department Name
+	@Test
+	public void deleteTheDepartmentName() {
+		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
+		SoftAssert softAssert = new SoftAssert();
+		HomePage homePage = new HomePage(defaultWebDriver);
+		DepartmentPage departmentPage = homePage.goToManageDepartment();
+		String actualSuccessMessage = departmentPage.goToCreateDepartmentName();
+		String deptName = departmentPage.departmentName;
+		boolean isVisible = departmentPage.goToDeleteDepartmentName(deptName);
+		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
+		softAssert.assertFalse(isVisible);
+		softAssert.assertAll();
+	}
 	
 	// Verify The Create WorkFlow
 	@Test
@@ -64,6 +94,27 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(atualSuccessMessageForWorkflowUpdation, expectedSuccessMessageForWorkflowUpdation);
 		softAssert.assertAll();
 	}
+	// Verify The Delete Workflow
+	
+	@Test
+	public void deleteTheManageWorkflow() {
+		String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
+		String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
+		String expectedStatusForWrkfDelete = "Workflow successfully deleted";
+		SoftAssert softAssert = new SoftAssert();
+		HomePage homePage = new HomePage(defaultWebDriver);
+		DepartmentPage departmentPage = homePage.goToManageDepartment();
+		String actualSuccessMessage = departmentPage.goToCreateDepartmentName();
+		String deptName = departmentPage.departmentName;
+		WorkflowPage workflowPage = homePage.goToManageWorkflow();
+		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
+		String wrkflowName = workflowPage.workflowName;
+		String actualStatusForWrkfDelete = workflowPage.goToDeleteWorkflow(wrkflowName);
+		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
+		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
+		softAssert.assertEquals(actualStatusForWrkfDelete, expectedStatusForWrkfDelete);
+		softAssert.assertAll();
+	}
 
 	// Verify The Create Request Type
 	@Test
@@ -80,7 +131,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertEquals(actualSuccessMessageForReuestType, expectedSuccessMessageForReuestType);
@@ -103,7 +154,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
 		String acutalSuccessfullMessageForModifyRequestType = reuestTypePage
 				.goToEditExistedRequestType(reuestTypePage.requestTypeName);
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
@@ -113,6 +164,28 @@ public class GovDepartmentTest extends TestBaseClass {
 				expectedSuccessfullMessageForModifyRequestType);
 		softAssert.assertAll();
 	}
+	// Verify The Create Request Type
+		@Test
+		public void deleteTheRequestType() {
+			String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
+			String expectedSuccessMessageForWorkflow = classLevelData.get("expectedSuccessMessageForWorkflow");
+			String expectedSuccessMessageForReuestType = classLevelData.get("expectedSuccessMessageForReuestType");
+			SoftAssert softAssert = new SoftAssert();
+			HomePage homePage = new HomePage(defaultWebDriver);
+			DepartmentPage departmentPage = homePage.goToManageDepartment();
+			String actualSuccessMessage = departmentPage.goToCreateDepartmentName();
+			String deptName = departmentPage.departmentName;
+			WorkflowPage workflowPage = homePage.goToManageWorkflow();
+			String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
+			String wrkflwName = workflowPage.workflowName;
+			RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
+			String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
+			reuestTypePage.goToDeleteRequestType(reuestTypePage.requestTypeName);
+			softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
+			softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
+			softAssert.assertEquals(actualSuccessMessageForReuestType, expectedSuccessMessageForReuestType);
+			softAssert.assertAll();
+		}
 
 	// Verify The Add Custom Field in Request Type
 	@Test
@@ -128,7 +201,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		reuestTypePage.goToAddRequestTypeCustomField("0 Test 0");
+		reuestTypePage.goToAddRequestTypeCustomField("Default Workflow");
 		softAssert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
 		softAssert.assertEquals(actualSuccessMessageForWorkflow, expectedSuccessMessageForWorkflow);
 		softAssert.assertAll();
@@ -147,7 +220,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		String actualSuccessMessageForWorkflow = workflowPage.goToCreateWorkflow(deptName);
 		String wrkflwName = workflowPage.workflowName;
 		RequestTypePage reuestTypePage = homePage.goToManageReuestTypes();
-		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("0 Test 0");
+		String actualSuccessMessageForReuestType = reuestTypePage.goToCreateNewRequestType("Default Workflow");
 		String requestTypeName = reuestTypePage.requestTypeName;
 		ReuestPage reuestPage = homePage.goToRequestTab();
 		String actualSuccessMessageForNR = reuestPage.goToCreateNewReuest(requestTypeName);
@@ -270,7 +343,7 @@ public class GovDepartmentTest extends TestBaseClass {
 		homePage.goToEnterTextInSearchBox(appDetails.getLoginUserName());
 
 	}
-	// Verify The New User
+	// Verify The New User(individual)
 
 	@Test
 	public void goToNewUser() {

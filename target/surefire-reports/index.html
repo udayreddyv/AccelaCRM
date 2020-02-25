@@ -24,21 +24,21 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-failed">Surefire suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-passed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
                     <span>[unset file name]</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Surefire_suite">
+                    <div class="method-list-content passed suite-Surefire_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.accelacrm.test.CitizenTest" class="method navigator-link" hash-for-method="verifyToManageAccount">verifyToManageAccount</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.accelacrm.test.GovDepartmentTest" hash-for-method="deleteTheRequestType">deleteTheRequestType</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,34 +117,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-failed">
+          <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.accelacrm.test.CitizenTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.accelacrm.test.GovDepartmentTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyToManageAccount">
-                  </a> <!-- verifyToManageAccount -->
-                  <span class="method-name">verifyToManageAccount</span>
-                  <div class="stack-trace">com.accelacrm.test.framework.selenium.exception.FrameworkException: com.accelacrm.test.framework.selenium.exception.FrameworkException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;dropdown&apos;]/descendant::img[@class=&apos;navbar-img&apos;]&quot;}
-  (Session info: chrome=80.0.3987.106)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;EC2AMAZ-R6JVPGJ&apos;, ip: &apos;10.30.62.98&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: D:\Users\ureddy\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65237}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2beca4a4c699bd976ef561db89b0449a
-*** Element info: {Using=xpath, value=//li[@class=&apos;dropdown&apos;]/descendant::img[@class=&apos;navbar-img&apos;]}
-	at com.accelacrm.test.pages.citizens.CitizensHomePage.goToModifyUserAccount(CitizensHomePage.java:51)
-	at com.accelacrm.test.CitizenTest.verifyToManageAccount(CitizenTest.java:17)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
+                  <a name="deleteTheRequestType">
+                  </a> <!-- deleteTheRequestType -->
+                  <span class="method-name">deleteTheRequestType</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-failed -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -153,10 +140,15 @@ Session ID: 2beca4a4c699bd976ef561db89b0449a
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire test&quot;&gt;
+    &lt;method-selectors&gt;
+      &lt;method-selector&gt;
+        &lt;selector-class name=&quot;org.apache.maven.surefire.testng.utils.MethodSelector&quot; priority=&quot;10000&quot;/&gt;
+      &lt;/method-selector&gt;
+    &lt;/method-selectors&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.accelacrm.test.CitizenTest&quot;/&gt;
+      &lt;class name=&quot;com.accelacrm.test.GovDepartmentTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -198,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyToManageAccount')
-data.setCell(0, 2, 'com.accelacrm.test.CitizenTest')
-data.setCell(0, 3, 7098);
+data.setCell(0, 1, 'deleteTheRequestType')
+data.setCell(0, 2, 'com.accelacrm.test.GovDepartmentTest')
+data.setCell(0, 3, 49711);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 49 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -220,9 +212,54 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">20 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.accelacrm.test.GovDepartmentTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createToPlaces</span>
+                <br/>
+                <span class="ignored-method-name">shareReportsToUser</span>
+                <br/>
+                <span class="ignored-method-name">createToManageWorkflow</span>
+                <br/>
+                <span class="ignored-method-name">modifyToPublicPeople</span>
+                <br/>
+                <span class="ignored-method-name">deleteTheDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">modifyToeWorkflow</span>
+                <br/>
+                <span class="ignored-method-name">createToManageRequestType</span>
+                <br/>
+                <span class="ignored-method-name">createToNewReuest</span>
+                <br/>
+                <span class="ignored-method-name">createToFAQ</span>
+                <br/>
+                <span class="ignored-method-name">goToNewUser</span>
+                <br/>
+                <span class="ignored-method-name">modifyTheDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">goToModifyManageRequestType</span>
+                <br/>
+                <span class="ignored-method-name">createToDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">createToUsers</span>
+                <br/>
+                <span class="ignored-method-name">goToAddCustomFieldForRequestType</span>
+                <br/>
+                <span class="ignored-method-name">createNewReport</span>
+                <br/>
+                <span class="ignored-method-name">deleteTheManageWorkflow</span>
+                <br/>
+                <span class="ignored-method-name">goToSearchGlobal</span>
+                <br/>
+                <span class="ignored-method-name">modifyToFAQ</span>
+                <br/>
+                <span class="ignored-method-name">CreateToPublicPeople</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Surefire_suite" class="panel">
@@ -231,24 +268,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.accelacrm.test.CitizenTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.accelacrm.test.GovDepartmentTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setupTest(org.testng.TestRunner@44e3760b)</span>
+                <span class="method-name">setupTest(org.testng.TestRunner@299266e2)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setupBeforeMethod(public void com.accelacrm.test.CitizenTest.verifyToManageAccount(), org.testng.TestRunner@44e3760b)</span>
-                <span class="method-start">311 ms</span>
+                <span class="method-name">setupBeforeMethod(public void com.accelacrm.test.GovDepartmentTest.deleteTheRequestType(), org.testng.TestRunner@29926...)</span>
+                <span class="method-start">165 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyToManageAccount</span>
-                <span class="method-start">8714 ms</span>
+                <span class="method-name">deleteTheRequestType</span>
+                <span class="method-start">6548 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDownAfterMethod(org.testng.TestRunner@44e3760b)</span>
-                <span class="method-start">15825 ms</span>
+                <span class="method-name">tearDownAfterMethod(org.testng.TestRunner@299266e2)</span>
+                <span class="method-start">56260 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
