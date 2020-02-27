@@ -26,6 +26,7 @@ public class TestBaseClass {
     public Map<String, String> classLevelData;
     public Map<String, String> methodLevelData;
    public FileUpload document;
+   LoginPage loginPage;
     
 
     @BeforeSuite
@@ -80,10 +81,17 @@ public class TestBaseClass {
         }
     }
     
-    public void loginCitizen()
+    public void loginGovDept(String deptName)
     {
-        defaultWebDriver.openURL(appDetails.getAppUrl());
-        loginSetup();
+        defaultWebDriver.openURL(appDetails.getAppUrl(deptName));
+        LoginPage loginPage = new LoginPage(defaultWebDriver);
+        loginPage.logInApplication(appDetails.getLoginUserName("GOVADMIN"), appDetails.getLoginUserPassword("GOVADMIN"));
+        
+     //   loginSetupForGov();
 
+    }
+    public void loginSetupForGov()
+    {
+       
     }
 }

@@ -537,5 +537,16 @@ public class DefaultWebDriver {
 				
 			}
 	}
+		public void mouseMoveToElement(By element) {
+			try {
+				Actions actions = new Actions(driver);
+				actions.moveToElement(driver.findElement(element));
+				actions.build().perform();
+			} catch (Exception ex) {
+				exceptionMessage = ex.getMessage();
+				log.info("@@@@@@@@@@@@@ error   : "+exceptionMessage);
+				
+			}
+	}
 
 }

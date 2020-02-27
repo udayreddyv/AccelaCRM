@@ -23,7 +23,7 @@ public class CitizensHomePage extends BasePage {
 	private static final By closeButton = By.xpath("//button[text()='Close']");
 	private static final By statusMessage = By.cssSelector("p.alert");
 	private static final By managentAccountButton = By.xpath("//a[text()='Manage account']");
-	private static final By c = By.xpath("");
+	private static final By logOutButton = By.xpath("//a[text()='Logout']");
 	private static final By d = By.xpath("");
 	
 	
@@ -43,7 +43,6 @@ public class CitizensHomePage extends BasePage {
 			String actualStatusOriginal = driver.getTextFromElement(statusMessage);
 			String actualStatusTrimming = (String) actualStatusOriginal.subSequence(0, 29);
 			actualStatus = actualStatusTrimming.trim();
-			log.info("&&&&&&&&&&&&&&&&&&&&&&&  : "+actualStatus);
 			driver.clickOnElement(closeButton);
 			
 		} catch (Exception e) {
@@ -52,5 +51,25 @@ public class CitizensHomePage extends BasePage {
 		}
 		log.info("End Method for - goToManageAccount");
 		return actualStatus;
+	}
+	
+	public void goToLogOutCitizenPage() {
+		
+		log.info("Start Method for - goToLogOutCitizenPage");
+		try {
+			driver.clickOnElement(userLogInImg);
+			driver.clickOnElement(logOutButton);
+					
+		} catch (Exception e) {
+			log.error("Failed to go ModifyUserAccount");
+			throw new FrameworkException(e.toString());
+		}
+		log.info("End Method for - goToManageAccount");
+	
+	}
+	
+	public void goToPreviusURL() {
+		driver.navigateToBack();
+		
 	}
 }

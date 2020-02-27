@@ -48,6 +48,7 @@ public class RequestTypePage extends BasePage {
 		try {
 			driver.typeText(reuestTypeNameText, requestTypeName);
 			driver.clickOnElement(workflowNameDropdownButtton);
+			driver.wait(WAIT_SMALL);
 			driver.clickOnElement(By.xpath(String.format(selectWorkflowName, workflowName)));
 			driver.wait(WAIT_SMALL);
 			driver.clickOnElement(saveButton);

@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="20" total="21" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="56742" started-at="2020-02-25T14:44:36Z" finished-at="2020-02-25T14:45:33Z">
+  <suite name="Surefire suite" duration-ms="142339" started-at="2020-02-27T09:48:08Z" finished-at="2020-02-27T09:50:31Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="56742" started-at="2020-02-25T14:44:36Z" finished-at="2020-02-25T14:45:33Z">
-      <class name="com.accelacrm.test.GovDepartmentTest">
-        <test-method status="PASS" signature="setupTest(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@13c78c0b]" name="setupTest" is-config="true" duration-ms="153" started-at="2020-02-25T14:44:36Z" finished-at="2020-02-25T14:44:36Z">
+    <test name="Surefire test" duration-ms="142339" started-at="2020-02-27T09:48:08Z" finished-at="2020-02-27T09:50:31Z">
+      <class name="com.accelacrm.test.CitizenTest">
+        <test-method status="PASS" signature="setupTest(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.CitizenTest@9f70c54]" name="setupTest" is-config="true" duration-ms="179" started-at="2020-02-27T09:48:08Z" finished-at="2020-02-27T09:48:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@299266e2]]>
+                <![CDATA[org.testng.TestRunner@1051817b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method status="PASS" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@13c78c0b]" name="setupBeforeMethod" is-config="true" duration-ms="6383" started-at="2020-02-25T14:44:36Z" finished-at="2020-02-25T14:44:42Z">
+        <test-method status="PASS" signature="setupBeforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.CitizenTest@9f70c54]" name="setupBeforeMethod" is-config="true" duration-ms="28150" started-at="2020-02-27T09:48:08Z" finished-at="2020-02-27T09:48:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.accelacrm.test.GovDepartmentTest.deleteTheRequestType()]]>
+                <![CDATA[public void com.accelacrm.test.CitizenTest.verifyToCreateNewIssue()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@299266e2]]>
+                <![CDATA[org.testng.TestRunner@1051817b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeMethod -->
-        <test-method status="PASS" signature="deleteTheRequestType()[pri:0, instance:com.accelacrm.test.GovDepartmentTest@13c78c0b]" name="deleteTheRequestType" duration-ms="49711" started-at="2020-02-25T14:44:42Z" finished-at="2020-02-25T14:45:32Z">
+        <test-method status="PASS" signature="verifyToCreateNewIssue()[pri:0, instance:com.accelacrm.test.CitizenTest@9f70c54]" name="verifyToCreateNewIssue" duration-ms="113515" started-at="2020-02-27T09:48:37Z" finished-at="2020-02-27T09:50:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteTheRequestType -->
-        <test-method status="PASS" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.GovDepartmentTest@13c78c0b]" name="tearDownAfterMethod" is-config="true" duration-ms="634" started-at="2020-02-25T14:45:32Z" finished-at="2020-02-25T14:45:33Z">
+        </test-method> <!-- verifyToCreateNewIssue -->
+        <test-method status="PASS" signature="tearDownAfterMethod(org.testng.ITestContext)[pri:0, instance:com.accelacrm.test.CitizenTest@9f70c54]" name="tearDownAfterMethod" is-config="true" duration-ms="653" started-at="2020-02-27T09:50:30Z" finished-at="2020-02-27T09:50:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@299266e2]]>
+                <![CDATA[org.testng.TestRunner@1051817b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterMethod -->
-      </class> <!-- com.accelacrm.test.GovDepartmentTest -->
+      </class> <!-- com.accelacrm.test.CitizenTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

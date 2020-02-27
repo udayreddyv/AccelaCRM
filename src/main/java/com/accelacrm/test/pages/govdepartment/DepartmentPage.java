@@ -73,8 +73,10 @@ public class DepartmentPage extends BasePage{
 			driver.wait(WAIT_SMALL);
 			driver.clickOnElement(deleteButton);
 			driver.clickOnElement(DeleteButtonAtAlert);
+			driver.wait(WAIT_SMALL);
 			driver.navigateToRefresh();
 			isVisible =driver.isElementPresentAndVisible(By.xpath(String.format(deptList, deptName)));
+			log.info("*********************** : "+isVisible);
 				
 		} catch (Exception ex) {
 			log.error("Failed go To DeleteDepartmentName");

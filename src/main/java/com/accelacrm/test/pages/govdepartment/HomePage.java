@@ -19,7 +19,7 @@ public class HomePage extends BasePage {
 	}
 	private static final Logger log = LogManager.getLogger(LoginPage.class);
 	private static final By settingsDropdownButton = By.xpath("//ul[@class='nav pull-right']/child::li[@class='dropdown']/descendant::i[@class='icon-cog icon-white']");
-	private static final By peopleUserDropdown = By.xpath("//ul[@class='nav pull-right']//descendant::span[@class='caret'][2]");
+	//private static final By peopleUserDropdown = By.xpath("//ul[@class='nav pull-right']//descendant::span[@class='caret'][2]");
 	private static final By manageDepartments = By.xpath("//a[contains(text(),'Manage Departments')]");
 	private static final By manageWorkflow = By.xpath("//a[contains(text(),'Manage Workflow')]");
 	private static final By manageReuestType = By.xpath("//a[contains(text(),'Manage Re')]");
@@ -39,6 +39,10 @@ public class HomePage extends BasePage {
 	private static final String requestID = "//strong[text()='%s']";
 	private static final By getRequestDetails = By.xpath("//span[@id='request_id']");
 	
+	private static final By peopleUserDropdown = By.cssSelector("i.icon-user+span");
+	private static final By myAccountSettingsLinkButton = By.linkText("My Account Settings");
+	private static final By redirectPageTitle = By.xpath("//div[@class='page-header']/h2");
+	//private static final By getRequestDetails = 
 	
 	public DepartmentPage goToManageDepartment() {
 		log.info("Start Method for goToManageDepartment");
@@ -197,6 +201,25 @@ public class HomePage extends BasePage {
 			throw new FrameworkException(ex.toString());
 		}
 		log.info("End Method for goToLogOut");
+		
+	}
+	
+	public String goToUserProfileEditPage() {
+		String pageTitle;
+		log.info("Start Method for goToUserProfileEditPage");
+		try {
+			driver.clickOnElement(peopleUserDropdown);
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(myAccountSettingsLinkButton);
+			driver.wait(WAIT_SMALL);
+			pageTitle = driver.getTextFromElement(redirectPageTitle);
+			
+		} catch (Exception ex) {
+			log.error("Failed to go goToUserProfileEditPage");
+			throw new FrameworkException(ex.toString());
+		}
+		log.info("End Method for goToUserProfileEditPage");
+		return pageTitle;
 		
 	}
 

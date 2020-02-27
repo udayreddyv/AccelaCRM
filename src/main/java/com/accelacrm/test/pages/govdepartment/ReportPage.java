@@ -33,14 +33,19 @@ public class ReportPage extends BasePage {
 	private static final By shareReportRecipients = By.xpath("//div[@id='share-modal']/descendant::ul");
 	private static final By shareReportAddNote = By.xpath("//div[@class='row-fluid']/child::textarea");
 	private static final By reportShareButton = By.xpath("//div[@class='modal-footer']/child::a[text()='Share']");
-	
 	private static final By searchedRecipientName = By.xpath("//div[@class='select2-result-label']");
-	
 	private static final By statuSMessageForSReport = By.xpath("//div[contains(text(),'Shared successfully')]");
 	
+	private static final String requiredReportFromList = "//div[@class='tab my-reports']/descendant::span[text()='%s']";
+	private static final String goToSettingOption = "//div[@class='tab my-reports']/descendant::span[text()='%s']/following-sibling::div";
+	private static final String deleteReport = "//div[@class='tab my-reports']/descendant::span[text()='%s']/following-sibling::div/descendant::div[text()='Delete Report']";
+	private static final By confirmDeleteReport = By.xpath("//a[text()='Delete']");
+	private static final By deleteReportStatus = By.xpath("//div[contains(text(),'successfully deleted')]");
+	
+	public String reportName;
 	public void createNewReport() {
 		log.info(" Start Method for - createNewReport");
-		String reportName = "Report_"+RandomStringUtils.randomAlphabetic(8);
+		reportName = "Report_"+RandomStringUtils.randomAlphabetic(8);
 		try {
 			driver.wait(WAIT_SMALL);
 			driver.clickOnElement(calendarDropdown);
@@ -81,6 +86,28 @@ public class ReportPage extends BasePage {
 		}
 		log.info(" End Method for - shareReports");
 		return actualStatusReport;
+	}
+	
+	
+	public String goToDeleteReport() {
+		String actualReportDeleteStatus;
+		log.info(" Start Method for - goToDeleteReport");
+		
+		try {
+			driver.navigateToRefresh();
+			driver.mouseMoveToElement(By.xpath(String.format(requiredReportFromList, reportName)));
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(By.xpath(String.format(goToSettingOption, reportName)));
+			driver.clickOnElement(By.xpath(String.format(deleteReport, reportName)));
+			driver.wait(WAIT_SMALL);
+			driver.clickOnElement(confirmDeleteReport);
+			String reportDeleteStatus = driver.getTextFromElement(deleteReportStatus);
+			actualReportDeleteStatus = (String) reportDeleteStatus.subSequence(16, 36);
+			} catch (Exception e) {
+			throw new FrameworkException(e.toString());
+		}
+		log.info(" End Method for - goToDeleteReport");
+		return actualReportDeleteStatus;
 	}
 
 }

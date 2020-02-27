@@ -164,7 +164,7 @@ public class GovDepartmentTest extends TestBaseClass {
 				expectedSuccessfullMessageForModifyRequestType);
 		softAssert.assertAll();
 	}
-	// Verify The Create Request Type
+	// Verify The delete Request Type
 		@Test
 		public void deleteTheRequestType() {
 			String expectedSuccessMessage = classLevelData.get("expectedSuccessMessage");
@@ -237,6 +237,22 @@ public class GovDepartmentTest extends TestBaseClass {
 		reportPage.createNewReport();
 		homePage.goToLogOut();
 	}
+	
+
+	// Verify The Delete Report
+	@Test
+	public void deleteReport() {
+		String expectedReportDeleteStatus ="successfully deleted";
+		SoftAssert softAssert = new SoftAssert();
+		HomePage homePage = new HomePage(defaultWebDriver);
+		ReportPage reportPage = homePage.goToReportTab();
+		reportPage.createNewReport();
+	    String actualReportDeleteStatus = reportPage.goToDeleteReport();
+	   	homePage.goToLogOut();
+	    softAssert.assertEquals(actualReportDeleteStatus, expectedReportDeleteStatus);
+	    softAssert.assertAll();
+	}
+	
 
 	// Verify The Create New User
 	@Test
@@ -250,6 +266,8 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualStatusMessage, expectedStatusMessage, "Not Matched");
 		softAssert.assertAll();
 	}
+	
+	
 
 	// Verify The Share Reports to User
 	@Test
@@ -330,7 +348,6 @@ public class GovDepartmentTest extends TestBaseClass {
 		ContentPage contentPage = homePage.goToContentTabThenFAQ();
 		String actualStatusMessageFAQ = contentPage.goToAddFAQPost();
 		String actualMessage = contentPage.goToModifyExistedFAQPost(contentPage.questionText);
-		System.out.println("******************************* : " + actualMessage);
 		softAssert.assertEquals(actualStatusMessageFAQ, expectedStatusMessageFAQ);
 		softAssert.assertAll();
 	}
@@ -354,6 +371,18 @@ public class GovDepartmentTest extends TestBaseClass {
 		softAssert.assertEquals(actualUrl, expectedUrl);
 		softAssert.assertAll();
 
+	}
+	
+	//Verify User Profile Page
+	@Test
+	public void verifyUserProfile()
+	{
+		String expectedStatus = "Manage my account";
+		SoftAssert softAssert = new SoftAssert();
+		HomePage homePage = new HomePage(defaultWebDriver);
+		String actualStatus = homePage.goToUserProfileEditPage();
+		softAssert.assertEquals(actualStatus, expectedStatus);
+		softAssert.assertAll();
 	}
 
 }
