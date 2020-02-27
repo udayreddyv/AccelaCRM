@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import com.accelacrm.test.framework.selenium.DefaultWebDriver;
 import com.accelacrm.test.framework.selenium.exception.FrameworkException;
 import com.accelacrm.test.pages.BasePage;
+import com.accelacrm.test.pages.citizen.login.LoginPage;
 
 public class CitizensHomePage extends BasePage {
 
@@ -67,9 +68,20 @@ public class CitizensHomePage extends BasePage {
 		log.info("End Method for - goToManageAccount");
 	
 	}
+	public void logInToGOVAdminModule()
+	{
+		log.info("Start Method for - logInToGOVAdminModule");
+		driver.navigateToUrl("https://gov-stage.publicstuff.com/dashboard");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.logInApplication("admin_neverland@publicstuff.com", "s7EWUbuphATamaH4");
+		log.info("End Method for - logInToGOVAdminModule");
+		
+	}
 	
 	public void goToPreviusURL() {
+		log.info("Start Method for - goToPreviusURL");
 		driver.navigateToBack();
+		log.info("End Method for - goToPreviusURL");
 		
 	}
 }

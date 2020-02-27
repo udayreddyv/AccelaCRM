@@ -377,7 +377,7 @@ public class GovDepartmentTest extends TestBaseClass {
 	@Test
 	public void verifyUserProfile()
 	{
-		String expectedStatus = "Manage my account";
+		String expectedStatus = "My Account Settings";
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		String actualStatus = homePage.goToUserProfileEditPage();

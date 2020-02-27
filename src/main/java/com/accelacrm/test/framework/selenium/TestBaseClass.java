@@ -86,12 +86,8 @@ public class TestBaseClass {
         defaultWebDriver.openURL(appDetails.getAppUrl(deptName));
         LoginPage loginPage = new LoginPage(defaultWebDriver);
         loginPage.logInApplication(appDetails.getLoginUserName("GOVADMIN"), appDetails.getLoginUserPassword("GOVADMIN"));
-        
-     //   loginSetupForGov();
+    
 
     }
-    public void loginSetupForGov()
-    {
-       
-    }
+   
 }

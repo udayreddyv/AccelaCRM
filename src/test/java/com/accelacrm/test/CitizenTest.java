@@ -27,10 +27,7 @@ public class CitizenTest extends TestBaseClass {
 	public void verifyToCreateNewIssue() {
 		CitizensHomePage citizensHomePage = new CitizensHomePage(defaultWebDriver);
 		//citizensHomePage.goToLogOutCitizenPage();
-		String govDeptCredentials = "GOVADMIN";
-		loginGovDept(govDeptCredentials);
-		
-		
+		citizensHomePage.logInToGOVAdminModule();
 		SoftAssert softAssert = new SoftAssert();
 		HomePage homePage = new HomePage(defaultWebDriver);
 		DepartmentPage departmentPage = homePage.goToManageDepartment();

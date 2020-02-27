@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-02-27 15:18:08 INFO  PropertiesLoader:20 - Loading environment properties
 2020-02-27 15:18:08 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
 2020-02-27 15:18:08 INFO  PropertiesLoader:43 - Loading class level properties
@@ -33,3 +34,460 @@
 2020-02-27 15:20:19 INFO  DefaultWebDriver:395 - Waiting 5000 seconds
 2020-02-27 15:20:24 INFO  DefaultWebDriver:395 - Waiting 5000 seconds
 2020-02-27 15:20:30 INFO  RequestTypePage:61 - End method for - goToCreateNewRequestType
+=======
+2020-02-18 17:09:54 INFO  PropertiesLoader:20 - Loading environment properties
+2020-02-18 17:09:54 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:09:54 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:09:54 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:09:54 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:09:54 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:09:54 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:09:54 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:09:54 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:09:54 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:09:54 INFO  PropertiesLoader:77 - Loading addCustomFieldForRequestType method level properties
+2020-02-18 17:09:54 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/addCustomFieldForRequestType.properties
+2020-02-18 17:09:54 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:09:54 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:09:54 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:09:59 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:10:03 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:10:04 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:10:04 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:10:08 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:10:08 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:10:09 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:10:09 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 17:10:10 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 17:10:10 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 17:10:12 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:10:22 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 17:10:22 INFO  LoginPage:71 - Start Method for goToManageReuestTypes
+2020-02-18 17:10:23 INFO  LoginPage:80 - End Method for goToManageReuestTypes
+2020-02-18 17:10:23 INFO  RequestTypePage:75 - Start method for - goToRequestTypeCustomField
+2020-02-18 17:10:25 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:10:30 INFO  RequestTypePage:95 - End method for - goToRequestTypeCustomField
+2020-02-18 17:10:31 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:10:31 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:10:31 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:10:31 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:10:31 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:10:31 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:10:31 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:10:31 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:10:31 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:10:31 INFO  PropertiesLoader:77 - Loading createNewReport method level properties
+2020-02-18 17:10:31 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createNewReport.properties
+2020-02-18 17:10:31 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:10:31 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:10:31 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:10:34 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:10:36 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:10:36 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:10:36 INFO  LoginPage:96 - Start Method for goToReportTab
+2020-02-18 17:10:41 INFO  LoginPage:104 - End Method for goToReportTab
+2020-02-18 17:10:41 INFO  ReportPage:42 -  Start Method for - createNewReport
+2020-02-18 17:10:41 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:10:46 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:10:51 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:10:57 INFO  ReportPage:57 -  End Method for - createNewReport
+2020-02-18 17:10:57 INFO  LoginPage:188 - Start Method for goToLogOut
+2020-02-18 17:10:57 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:11:04 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:11:14 INFO  LoginPage:199 - End Method for goToLogOut
+2020-02-18 17:11:14 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:11:14 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:11:14 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:11:14 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:11:14 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:11:14 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:11:14 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:11:14 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:11:14 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:11:14 INFO  PropertiesLoader:77 - Loading createNewUser method level properties
+2020-02-18 17:11:14 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createNewUser.properties
+2020-02-18 17:11:14 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:11:14 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:11:14 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:11:18 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:11:22 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:11:22 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:11:22 INFO  LoginPage:147 - Start Method for goToManageUsers
+2020-02-18 17:11:26 INFO  LoginPage:156 - End Method for goToManageUsers
+2020-02-18 17:11:26 INFO  UsersPage:34 - Start Method for - createUser
+2020-02-18 17:11:29 INFO  UsersPage:43 - **************** :  Action Successful
+2020-02-18 17:11:29 INFO  UsersPage:50 - End Method for - createUser
+2020-02-18 17:11:29 INFO  LoginPage:188 - Start Method for goToLogOut
+2020-02-18 17:11:29 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:11:35 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:11:45 INFO  LoginPage:199 - End Method for goToLogOut
+2020-02-18 17:11:46 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:11:46 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:11:46 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:11:46 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:11:46 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:11:46 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:11:46 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:11:46 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:11:46 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:11:46 INFO  PropertiesLoader:77 - Loading createTheDepartmentName method level properties
+2020-02-18 17:11:46 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createTheDepartmentName.properties
+2020-02-18 17:11:46 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:11:46 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:11:46 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:11:50 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:11:52 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:11:52 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:11:52 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:11:56 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:11:56 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:11:57 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:11:58 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:11:58 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:11:58 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:11:58 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:11:58 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:11:58 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:11:58 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:11:58 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:11:58 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:11:58 INFO  PropertiesLoader:77 - Loading createTheFAQ method level properties
+2020-02-18 17:11:58 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createTheFAQ.properties
+2020-02-18 17:11:58 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:11:58 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:11:58 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:12:01 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:12:03 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:12:03 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:12:03 INFO  LoginPage:134 - Start Method for goToContentTabThenFAQ
+2020-02-18 17:12:07 INFO  LoginPage:143 - End Method for goToContentTabThenFAQ
+2020-02-18 17:12:07 INFO  ContentPage:112 - Start Method for - goToAddPlaces
+2020-02-18 17:12:08 INFO  ContentPage:118 - **************************** :Post successful!
+2020-02-18 17:12:08 INFO  ContentPage:124 - End Method for - goToAddPlaces
+2020-02-18 17:12:09 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:12:09 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:12:09 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:12:09 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:12:09 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:12:09 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:12:09 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:12:09 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:12:09 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:12:09 INFO  PropertiesLoader:77 - Loading createTheNewRequest method level properties
+2020-02-18 17:12:09 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createTheNewRequest.properties
+2020-02-18 17:12:09 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:12:09 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:12:09 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:12:12 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:12:15 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:12:15 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:12:15 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:12:20 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:12:20 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:12:21 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:12:21 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 17:12:23 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 17:12:23 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 17:12:24 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:12:34 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 17:12:34 INFO  LoginPage:71 - Start Method for goToManageReuestTypes
+2020-02-18 17:12:35 INFO  LoginPage:80 - End Method for goToManageReuestTypes
+2020-02-18 17:12:35 INFO  RequestTypePage:40 - Start method for - goToCreateNewRequestType
+2020-02-18 17:12:37 INFO  RequestTypePage:54 - End method for - goToCreateNewRequestType
+2020-02-18 17:12:37 INFO  LoginPage:84 - Start Method for goToRequestTab
+2020-02-18 17:12:38 INFO  LoginPage:92 - End Method for goToRequestTab
+2020-02-18 17:12:38 INFO  ReuestPage:30 - Start method for - goToCreateNewReuest
+2020-02-18 17:12:39 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:12:45 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:12:52 INFO  ReuestPage:46 - **************************** : ReuestType_Sbqis #2231367 has been submitted successfully, click here to view it.
+2020-02-18 17:12:52 INFO  ReuestPage:48 - **********After Modify****************** : has been submitted successfully, click here to view it.
+2020-02-18 17:12:52 INFO  ReuestPage:54 - End method for - goToCreateNewReuest
+2020-02-18 17:12:53 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:12:53 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:12:53 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:12:53 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:12:53 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:12:53 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:12:53 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:12:53 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:12:53 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:12:53 INFO  PropertiesLoader:77 - Loading createThePlaces method level properties
+2020-02-18 17:12:53 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createThePlaces.properties
+2020-02-18 17:12:53 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:12:53 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:12:53 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:12:56 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:12:58 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:12:59 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:12:59 INFO  LoginPage:121 - Start Method for goToContentTabThenPlace
+2020-02-18 17:13:03 INFO  LoginPage:130 - End Method for goToContentTabThenPlace
+2020-02-18 17:13:03 INFO  ContentPage:91 - Start Method for - goToAddPlaces
+2020-02-18 17:13:03 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:13:09 INFO  ContentPage:104 - End Method for - goToAddPlaces
+2020-02-18 17:13:10 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:13:10 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:13:10 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:13:10 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:13:10 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:13:10 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:13:10 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:13:10 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:13:10 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:13:10 INFO  PropertiesLoader:77 - Loading createThePublicPeople method level properties
+2020-02-18 17:13:10 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createThePublicPeople.properties
+2020-02-18 17:13:10 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:13:10 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:13:10 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:13:13 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:13:16 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:13:17 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:13:17 INFO  LoginPage:108 - Start Method for goToContentTabThenPublicPeople
+2020-02-18 17:13:20 INFO  LoginPage:117 - End Method for goToContentTabThenPublicPeople
+2020-02-18 17:13:20 INFO  ContentPage:50 - Start Method For -addPublicPeople 
+2020-02-18 17:13:22 INFO  ContentPage:64 - End Method For -addPublicPeople 
+2020-02-18 17:13:22 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:13:22 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:13:22 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:13:22 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:13:22 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:13:22 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:13:22 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:13:22 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:13:22 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:13:22 INFO  PropertiesLoader:77 - Loading createTheRequestType method level properties
+2020-02-18 17:13:22 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createTheRequestType.properties
+2020-02-18 17:13:22 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:13:22 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:13:22 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:13:26 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:13:28 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:13:28 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:13:28 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:13:33 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:13:33 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:13:35 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:13:35 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 17:13:36 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 17:13:36 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 17:13:38 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:13:48 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 17:13:48 INFO  LoginPage:71 - Start Method for goToManageReuestTypes
+2020-02-18 17:13:49 INFO  LoginPage:80 - End Method for goToManageReuestTypes
+2020-02-18 17:13:49 INFO  RequestTypePage:40 - Start method for - goToCreateNewRequestType
+2020-02-18 17:13:51 INFO  RequestTypePage:54 - End method for - goToCreateNewRequestType
+2020-02-18 17:13:51 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:13:51 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:13:51 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:13:51 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:13:51 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:13:51 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:13:51 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:13:51 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:13:51 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:13:51 INFO  PropertiesLoader:77 - Loading createTheWorkflow method level properties
+2020-02-18 17:13:51 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/createTheWorkflow.properties
+2020-02-18 17:13:51 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:13:51 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:13:51 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:13:55 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:13:57 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:13:58 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:13:58 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:14:01 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:14:01 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:14:02 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:14:02 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 17:14:03 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 17:14:03 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 17:14:05 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:14:15 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 17:14:15 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:14:15 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:14:15 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:14:15 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:14:15 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:14:15 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:14:15 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:14:15 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:14:15 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:14:15 INFO  PropertiesLoader:77 - Loading goToNewUser method level properties
+2020-02-18 17:14:15 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/goToNewUser.properties
+2020-02-18 17:14:15 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:14:15 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:14:15 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:14:19 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:14:20 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:14:21 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:14:21 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:14:26 INFO  DefaultWebDriver:66 - Current url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:14:26 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:14:26 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:14:26 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:14:26 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:14:26 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:14:26 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:14:26 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:14:26 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:14:26 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:14:26 INFO  PropertiesLoader:77 - Loading modifyRequestType method level properties
+2020-02-18 17:14:26 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/modifyRequestType.properties
+2020-02-18 17:14:26 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:14:26 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:14:26 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:14:30 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:14:32 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:14:32 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:14:32 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:14:36 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:14:36 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:14:37 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:14:37 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 17:14:38 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 17:14:38 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 17:14:39 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:14:49 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 17:14:49 INFO  LoginPage:71 - Start Method for goToManageReuestTypes
+2020-02-18 17:14:51 INFO  LoginPage:80 - End Method for goToManageReuestTypes
+2020-02-18 17:14:51 INFO  RequestTypePage:40 - Start method for - goToCreateNewRequestType
+2020-02-18 17:14:52 INFO  RequestTypePage:54 - End method for - goToCreateNewRequestType
+2020-02-18 17:14:52 INFO  RequestTypePage:58 - Start method for - goToEditExistedRequestType
+2020-02-18 17:14:53 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:14:59 INFO  RequestTypePage:70 - End method for - goToEditExistedRequestType
+2020-02-18 17:14:59 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:14:59 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:14:59 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:14:59 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:14:59 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:14:59 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:14:59 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:14:59 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:14:59 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:14:59 INFO  PropertiesLoader:77 - Loading modifyTheFAQ method level properties
+2020-02-18 17:14:59 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/modifyTheFAQ.properties
+2020-02-18 17:14:59 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:14:59 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:14:59 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:15:03 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:15:04 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:15:05 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:15:05 INFO  LoginPage:134 - Start Method for goToContentTabThenFAQ
+2020-02-18 17:15:08 INFO  LoginPage:143 - End Method for goToContentTabThenFAQ
+2020-02-18 17:15:09 INFO  ContentPage:112 - Start Method for - goToAddPlaces
+2020-02-18 17:15:09 INFO  ContentPage:118 - **************************** :Post successful!
+2020-02-18 17:15:09 INFO  ContentPage:124 - End Method for - goToAddPlaces
+2020-02-18 17:15:09 INFO  ContentPage:129 - Start Method for - goToAddPlaces
+2020-02-18 17:15:10 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:15:15 INFO  ContentPage:137 - **************************** :Post successful!
+2020-02-18 17:15:15 INFO  ContentPage:143 - End Method for - goToAddPlaces
+2020-02-18 17:15:16 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:15:16 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:15:16 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:15:16 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:15:16 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:15:16 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:15:16 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:15:16 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:15:16 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:15:16 INFO  PropertiesLoader:77 - Loading modifyThePublicPeople method level properties
+2020-02-18 17:15:16 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/modifyThePublicPeople.properties
+2020-02-18 17:15:16 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:15:16 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:15:16 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:15:19 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:15:22 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:15:23 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:15:23 INFO  LoginPage:108 - Start Method for goToContentTabThenPublicPeople
+2020-02-18 17:15:27 INFO  LoginPage:117 - End Method for goToContentTabThenPublicPeople
+2020-02-18 17:15:27 INFO  ContentPage:50 - Start Method For -addPublicPeople 
+2020-02-18 17:15:28 INFO  ContentPage:64 - End Method For -addPublicPeople 
+2020-02-18 17:15:28 INFO  ContentPage:70 - Start Method For -addPublicPeople 
+2020-02-18 17:15:29 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:15:34 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:15:39 INFO  ContentPage:78 - *************************** : Save successful!
+2020-02-18 17:15:39 INFO  ContentPage:85 - End Method For -addPublicPeople 
+2020-02-18 17:15:40 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:15:40 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:15:40 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:15:40 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:15:40 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:15:40 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:15:40 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:15:40 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:15:40 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:15:40 INFO  PropertiesLoader:77 - Loading modifyTheWorkflow method level properties
+2020-02-18 17:15:40 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/modifyTheWorkflow.properties
+2020-02-18 17:15:40 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:15:40 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:15:40 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:15:43 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:15:45 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:15:45 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:15:45 INFO  LoginPage:44 - Start Method for goToManageDepartment
+2020-02-18 17:15:49 INFO  LoginPage:53 - End Method for goToManageDepartment
+2020-02-18 17:15:49 INFO  DepartmentPage:30 - Start Method for - goToCreateDepartmentName
+2020-02-18 17:15:50 INFO  DepartmentPage:40 - End Method for - goToCreateDepartmentName
+2020-02-18 17:15:50 INFO  LoginPage:58 - Start Method for goToManageWorkflow
+2020-02-18 17:15:51 INFO  LoginPage:67 - End Method for goToManageWorkflow
+2020-02-18 17:15:51 INFO  LoginPage:36 - Start method for goToCreateWorkflow
+2020-02-18 17:15:53 INFO  DefaultWebDriver:386 - Waiting 10000 seconds
+2020-02-18 17:16:03 INFO  LoginPage:51 - End method for goToCreateWorkflow
+2020-02-18 17:16:03 INFO  LoginPage:56 - Start method for goToModifyWorkflow
+2020-02-18 17:16:03 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:16:18 ERROR DefaultWebDriver:213 - Failed to getText  By.xpath: //div[text()='Workflow successfully created']
+2020-02-18 17:16:18 INFO  LoginPage:70 - End method for goToModifyWorkflow
+2020-02-18 17:16:19 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:16:19 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:16:19 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:16:19 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:16:19 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:16:19 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:16:19 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:16:19 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:16:19 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:16:19 INFO  PropertiesLoader:77 - Loading shareReportToUser method level properties
+2020-02-18 17:16:19 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/shareReportToUser.properties
+2020-02-18 17:16:19 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:16:19 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:16:19 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:16:22 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:16:25 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:16:25 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:16:25 INFO  LoginPage:147 - Start Method for goToManageUsers
+2020-02-18 17:16:29 INFO  LoginPage:156 - End Method for goToManageUsers
+2020-02-18 17:16:29 INFO  UsersPage:34 - Start Method for - createUser
+2020-02-18 17:16:32 INFO  UsersPage:43 - **************** :  Action Successful
+2020-02-18 17:16:32 INFO  UsersPage:50 - End Method for - createUser
+2020-02-18 17:16:32 INFO  LoginPage:96 - Start Method for goToReportTab
+2020-02-18 17:16:34 INFO  LoginPage:104 - End Method for goToReportTab
+2020-02-18 17:16:34 INFO  ReportPage:61 -  Start Method for - shareReports
+2020-02-18 17:16:35 ERROR DefaultWebDriver:125 - Failed to enter text on element By.xpath: //div[@id='share-modal']/descendant::ul
+2020-02-18 17:16:35 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:16:42 INFO  ReportPage:75 - ***************** : Shared successfully with 1 person
+2020-02-18 17:16:42 INFO  ReportPage:82 -  End Method for - shareReports
+2020-02-18 17:16:43 INFO  PropertiesLoader:40 - Start of the method - loadClassLevelData
+2020-02-18 17:16:43 INFO  PropertiesLoader:43 - Loading class level properties
+2020-02-18 17:16:43 INFO  PropertiesLoader:44 - **********CLASS NAME : class com.accelacrm.test.GovDepartmentTest
+2020-02-18 17:16:43 INFO  PropertiesLoader:46 - **********FILE NAME : /com/accelacrm/test/GovDepartmentTest.properties
+2020-02-18 17:16:43 INFO  PropertiesLoader:54 - expectedSuccessMessageForWorkflow : Workflow successfully created
+2020-02-18 17:16:43 INFO  PropertiesLoader:54 - expectedSuccessMessageForReuestType : has been created successfully
+2020-02-18 17:16:43 INFO  PropertiesLoader:54 - expectedSuccessMessage : Success! Department Added.
+2020-02-18 17:16:43 INFO  PropertiesLoader:61 - End of the method - loadClassLevelData
+2020-02-18 17:16:43 INFO  PropertiesLoader:74 - Start of the method - loadMethodLevelData
+2020-02-18 17:16:43 INFO  PropertiesLoader:77 - Loading verifyGlobalSearch method level properties
+2020-02-18 17:16:43 INFO  PropertiesLoader:81 - FileName : /com/accelacrm/test/GovDepartmentTest/verifyGlobalSearch.properties
+2020-02-18 17:16:43 ERROR PropertiesLoader:93 - Failed to load method level properties
+2020-02-18 17:16:43 ERROR PropertiesLoader:94 - java.lang.NullPointerException: inStream parameter is null
+2020-02-18 17:16:43 INFO  PropertiesLoader:96 - End of the method - loadMethodLevelData
+2020-02-18 17:16:46 INFO  DefaultWebDriver:49 - Opening url : https://gov-stage.publicstuff.com/dashboard
+2020-02-18 17:16:48 INFO  LoginPage:41 - Start of the method - login
+2020-02-18 17:16:49 INFO  LoginPage:68 - End of the method - login
+2020-02-18 17:16:49 INFO  LoginPage:162 - Start Method for goToEnterTextInSearchBox
+2020-02-18 17:16:49 INFO  LoginPage:164 - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ : admin_neverland@publicstuff.com
+2020-02-18 17:16:49 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:16:56 INFO  LoginPage:169 - ********************  requestId :2230894
+2020-02-18 17:16:56 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:17:03 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:17:08 INFO  DefaultWebDriver:386 - Waiting 5000 seconds
+2020-02-18 17:17:13 INFO  LoginPage:176 - &&&&&&&&&&&&&&&&&&&&&&&&&&&&   requestDetails : 2230894
+2020-02-18 17:17:13 INFO  LoginPage:183 - End Method for goToEnterTextInSearchBox
+>>>>>>> 8881e41b1146b289985d7c0b490748c15c7cdd14
